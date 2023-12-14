@@ -6,14 +6,6 @@ You can edit and delete data that you saved.
 
 ## Packages i used
 
-# Save App
-
-Hello everyone,
-finally i finished the save application that it can save all you want from any where to one place, find you saved easily using searching feature and share it on any social media platform.
-You can edit and delete data that you saved.
-
-## Packages i used
-
   #local_data
   sqflite: ^2.3.0
   shared_preferences: ^2.2.0
