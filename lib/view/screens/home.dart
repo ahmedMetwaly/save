@@ -4,7 +4,6 @@ import 'package:provider/provider.dart';
 import 'package:save/model/cash_helper.dart';
 import 'package:save/model/database.dart';
 import 'package:save/view/screens/add_category.dart';
-import 'package:save/view/screens/social_media/display_social_media.dart';
 import 'package:save/view/widgets/home_widgets/withOut_photos/category_with_out_photos.dart';
 import 'package:save/view/widgets/home_widgets/with_photos/display_item_with_photos.dart';
 import '../../core/theme/app_colors.dart';
@@ -14,6 +13,7 @@ import '../widgets/components/my_app_bar.dart';
 import '../widgets/home_widgets/add_data_for_first_time.dart';
 import '../widgets/components/fab.dart';
 import '../widgets/components/my_drawer.dart';
+import '../widgets/home_widgets/categories.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -42,41 +42,7 @@ class Home extends StatelessWidget {
                       value.data.isNotEmpty ? const FAB() : const SizedBox(),
                   body: SafeArea(
                     child: Column(children: [
-                      SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Row(
-                          children: [
-                            GestureDetector(
-                              onTap: () => Navigator.of(context)
-                                  .pushNamed(DisplaySocialMedia.routeName),
-                              child: Container(
-                                height: 70.h,
-                                padding: EdgeInsets.all(10.w),
-                                color: AppColors.primaryStart,
-                                child: const Center(
-                                  child: Text(
-                                    "Social Media",
-                                  ),
-                                ),
-                              ),
-                            ),
-                            TabBar(
-                              isScrollable: true,
-                              tabs: categoryNames
-                                  .map((categoryName) => GestureDetector(
-                                        onLongPress: () => value.delteCategory(
-                                            context,
-                                            categoryName: categoryName),
-                                        child: Tab(
-                                          iconMargin: EdgeInsets.zero,
-                                          text: categoryName,
-                                        ),
-                                      ))
-                                  .toList(),
-                            ),
-                          ],
-                        ),
-                      ),
+                      Categories(categoryNames: categoryNames),
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 16.w),
                         child: GestureDetector(

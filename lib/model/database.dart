@@ -60,7 +60,7 @@ class MySql with ChangeNotifier {
       getSocialMediaData(db);
       notifyListeners();
 
-     // print("data is : $data");
+      // print("data is : $data");
     }).catchError((error) => error);
   }
 
@@ -107,7 +107,7 @@ class MySql with ChangeNotifier {
     }
   }
 
-  Future delteCategory(BuildContext context,
+  Future deleteCategory(BuildContext context,
       {required String categoryName}) async {
     showDialog(
         context: context,
@@ -117,7 +117,7 @@ class MySql with ChangeNotifier {
             content: 'Do you want to delete $categoryName ?',
             onPressedOk: () async {
               await database.rawDelete('DELETE FROM fav WHERE categoryName = ?',
-                      [categoryName]).then((value) => getFav(database));
+                  [categoryName]).then((value) => getFav(database));
               await database
                   .rawDelete('DELETE FROM categories WHERE categoryName = ?',
                       [categoryName])
@@ -325,13 +325,13 @@ class MySql with ChangeNotifier {
           categoryContent != null) {
         List valuesOfContent = fetchValues(content);
         List values = fetchValues(categoryContent);
-        
+
         for (int i = 0; i < valuesOfContent.length; i++) {
           List<String> checkValues = valuesOfContent[i].split("\n");
           checkValues.removeLast();
           comparedTitle = checkValues[0].substring(3);
           if (content.contains(checkValues[0].substring(3))) {
-           // print(comparedTitle);
+            // print(comparedTitle);
             break;
           }
         }
