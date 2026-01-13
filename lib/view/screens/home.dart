@@ -6,6 +6,7 @@ import 'package:save/view/screens/add_category.dart';
 import 'package:save/view/screens/social_media/display_social_media.dart';
 import 'package:save/view/widgets/home_widgets/withOut_photos/category_with_out_photos.dart';
 import 'package:save/view/widgets/home_widgets/with_photos/display_item_with_photos.dart';
+import '../widgets/components/empty_widget.dart';
 import '../widgets/components/loading_data.dart';
 import '../widgets/components/my_app_bar.dart';
 import '../widgets/home_widgets/add_data_for_first_time.dart';
@@ -106,13 +107,12 @@ class Home extends StatelessWidget {
 
                                     return category["withImage"] == "true"
                                         ? content == "Empty" || content == ""
-                                            ? Center(
-                                                child: Text(
-                                                "Empty",
-                                                style: Theme.of(context)
-                                                    .textTheme
-                                                    .labelMedium,
-                                              ))
+                                            ? EmptyStateWidget(
+                                                icon: Icons.inbox_rounded,
+                                                title: 'No Items Yet',
+                                                subtitle:
+                                                    'Tap the + button to add your first item',
+                                              )
                                             : ListView.separated(
                                                 itemBuilder: (context, index) {
                                                   Map dataToDisplay =

@@ -3,6 +3,8 @@ import 'package:provider/provider.dart';
 import 'package:save/model/database.dart';
 import 'package:save/view/widgets/home_widgets/withOut_photos/display_item_with_out_photo.dart';
 
+import '../../components/empty_widget.dart';
+
 class CategoryWithOutPhotos extends StatelessWidget {
   const CategoryWithOutPhotos(
       {super.key, required this.content, required this.categoryName});
@@ -13,11 +15,11 @@ class CategoryWithOutPhotos extends StatelessWidget {
   Widget build(BuildContext context) {
     final watchSql = context.watch<MySql>();
     if (content == "Empty") {
-      return Center(
-          child: Text(
-        "Empty",
-        style: Theme.of(context).textTheme.labelMedium,
-      ));
+      return EmptyStateWidget(
+        icon: Icons.inbox_rounded,
+        title: 'No Items Yet',
+        subtitle: 'Tap the + button to add your first item',
+      );
     } else {
       //print(content);
       if (content != "") {
