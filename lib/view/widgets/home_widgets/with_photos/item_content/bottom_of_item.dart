@@ -60,7 +60,7 @@ class BottomOfItem extends StatelessWidget {
                 },
                 icon: Icon(
                   Icons.favorite,
-                  size: 30.sp,
+                  size: 25.sp,
                   color: value.favList.any((favItem) =>
                           favItem["content"].toString().contains(title))
                       ? Colors.red
@@ -84,7 +84,7 @@ class BottomOfItem extends StatelessWidget {
                     //  print("Error in share $error");
                   }
                 },
-                icon: Icon(Icons.share, size: 30.sp),
+                icon: Icon(Icons.share, size: 25.sp),
                 color: Theme.of(context).primaryColor,
                 splashRadius: 20.0.r)
           ],

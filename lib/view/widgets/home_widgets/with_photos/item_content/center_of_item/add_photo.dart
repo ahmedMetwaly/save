@@ -64,7 +64,7 @@ class AddPhoto extends StatelessWidget {
         borderRadius: BorderRadius.circular(10.r),
         child: Container(
           width: 150.w,
-          height: 150.h,
+          height: 80.h,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10.r),
               border: Border.all(
@@ -76,8 +76,8 @@ class AddPhoto extends StatelessWidget {
             children: [
               Icon(
                 Icons.add_a_photo,
-                size: 30.sp,
-                color: Theme.of(context).primaryColor.withOpacity(0.5),
+                size: 20.sp,
+                color: Theme.of(context).primaryColor.withValues(alpha: 0.5),
               ),
               SizedBox(
                 height: 15.h,
@@ -85,8 +85,8 @@ class AddPhoto extends StatelessWidget {
               Text(
                 "Add Photo",
                 style: TextStyle(
-                  fontSize: 20.sp,
-                  color: Theme.of(context).primaryColor.withOpacity(0.5),
+                  fontSize: 15.sp,
+                  color: Theme.of(context).primaryColor.withValues(alpha: 0.5),
                 ),
               ),
             ],

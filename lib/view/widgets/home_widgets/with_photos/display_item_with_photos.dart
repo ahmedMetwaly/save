@@ -61,59 +61,67 @@ class DisplayItemWithPhotos extends StatelessWidget {
           padding: EdgeInsets.all(10.0.w),
           child: Column(
             children: [
-              fromSearchScreen
-                  ? SizedBox(
-                      height: 15.h,
-                    )
-                  : Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        IconButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Edit(
-                                        labelList: labelList,
-                                        categoryName: categoryName,
-                                        title: title,
-                                        valueList: valuesList,
-                                      )),
-                            );
-                          },
-                          icon: const Icon(Icons.edit),
-                          color: Theme.of(context).primaryColor,
-                          iconSize: 30.sp,
-                        ),
-                        favScreen
-                            ? const SizedBox()
-                            : IconButton(
-                                onPressed: () {
-                                  showDialog(
-                                    context: context,
-                                    builder: (context) {
-                                      return ShowAlertDialog(
-                                          title: "Delete",
-                                          content:
-                                              "Do want to delete ${valuesList[0]} from $categoryName ?",
-                                          onPressedOk: () {
-                                            deleteFromCategory(context);
-                                            Navigator.of(context).pop();
-                                          });
+              Row(
+                children: [
+                  Expanded(
+                    child: HeadOfItem(
+                        labelList: labelList,
+                        urls: urlsList,
+                        valuesList: valuesList),
+                  ),
+                  fromSearchScreen
+                      ? SizedBox(
+                          height: 15.h,
+                        )
+                      : Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            IconButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Edit(
+                                            labelList: labelList,
+                                            categoryName: categoryName,
+                                            title: title,
+                                            valueList: valuesList,
+                                          )),
+                                );
+                              },
+                              icon: const Icon(Icons.edit),
+                              color: Theme.of(context).primaryColor,
+                              iconSize: 25.sp,
+                            ),
+                            favScreen
+                                ? const SizedBox()
+                                : IconButton(
+                                    onPressed: () {
+                                      showDialog(
+                                        context: context,
+                                        builder: (context) {
+                                          return ShowAlertDialog(
+                                              title: "Delete",
+                                              content:
+                                                  "Do want to delete ${valuesList[0]} from $categoryName ?",
+                                              onPressedOk: () {
+                                                deleteFromCategory(context);
+                                                Navigator.of(context).pop();
+                                              });
+                                        },
+                                      );
                                     },
-                                  );
-                                },
-                                icon: const Icon(Icons.delete),
-                                color: Theme.of(context).primaryColor,
-                                iconSize: 30.sp,
-                              ),
-                      ],
-                    ),
-              HeadOfItem(
-                  labelList: labelList, urls: urlsList, valuesList: valuesList),
+                                    icon: const Icon(Icons.delete),
+                                    color: Colors.red,
+                                    iconSize: 25.sp,
+                                  ),
+                          ],
+                        ),
+                ],
+              ),
               SizedBox(height: 15.h),
               SizedBox(
-                height: 150.h,
+                height: 80.h,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [

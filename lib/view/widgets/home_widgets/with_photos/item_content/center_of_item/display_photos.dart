@@ -88,7 +88,7 @@ class DisplayPhotos extends StatelessWidget {
                                 },
                               )
                             : AlertDialog(
-                                title: const Text("Warnning"),
+                                title: const Text("Warning"),
                                 content:
                                     const Text("It must be at least one image"),
                                 actions: [
