@@ -6,8 +6,8 @@ import 'package:share_plus/share_plus.dart';
 import '../../../../../model/database.dart';
 
 // ignore: must_be_immutable
-class ButtomOfItem extends StatelessWidget {
-  ButtomOfItem(
+class BottomOfItem extends StatelessWidget {
+  BottomOfItem(
       {super.key,
       required this.labelList,
       required this.imagesList,
@@ -39,29 +39,29 @@ class ButtomOfItem extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             IconButton(
-                onPressed: () async{
+                onPressed: () async {
                   String content = value.selectSpecificContent(
                       categoryName: categoryName, title: title);
 
                   int endIndex = content.indexOf("]");
                   String favContent = content.substring(0, endIndex + 1);
-                  if (value.favList.any((favitem) =>
-                      favitem["content"].toString().contains(title))) {
-                        await value.deleteFromFav(content: favContent);
-                        //print("found");
-                        //print(value.favList);
+                  if (value.favList.any((favItem) =>
+                      favItem["content"].toString().contains(title))) {
+                    await value.deleteFromFav(content: favContent);
+                    //print("found");
+                    //print(value.favList);
                   } else {
                     await value.insertToFav(context,
                         content: favContent, categoryName: categoryName);
                     //print("inserted");
-                   // print(value.favList);
+                    // print(value.favList);
                   }
                 },
                 icon: Icon(
                   Icons.favorite,
                   size: 30,
-                  color: value.favList.any((favitem) =>
-                          favitem["content"].toString().contains(title))
+                  color: value.favList.any((favItem) =>
+                          favItem["content"].toString().contains(title))
                       ? Colors.red
                       : Theme.of(context).primaryColor,
                 ),
@@ -72,16 +72,15 @@ class ButtomOfItem extends StatelessWidget {
                   try {
                     fetchData();
                     // ignore: deprecated_member_use
-                    await Share.shareFiles(
-                        images.map((image) => image!.path).toList(),
+                    await Share.shareXFiles(
+                        images.map((image) => XFile(image!.path)).toList(),
                         text: sharedData
                             .toString()
                             .replaceFirst("[", "")
                             .replaceAll("]", "")
                             .replaceAll(", ", ""));
                   } catch (error) {
-                  //  print("Error in share $error");
-                  
+                    //  print("Error in share $error");
                   }
                 },
                 icon: const Icon(Icons.share, size: 30),

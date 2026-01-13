@@ -41,10 +41,10 @@ class DisplayItemWithPhotos extends StatelessWidget {
         newContent: "",
         categoryName: categoryName,
         oldContent: "$oldContent]");
-        List favContent = value.favList.map((fav) => fav["content"]).toList();
-        if(favContent.contains("$oldContent]")){
-           value.deleteFromFav(content: "$oldContent]");
-        }
+    List favContent = value.favList.map((fav) => fav["content"]).toList();
+    if (favContent.contains("$oldContent]")) {
+      value.deleteFromFav(content: "$oldContent]");
+    }
   }
 
   @override
@@ -91,15 +91,14 @@ class DisplayItemWithPhotos extends StatelessWidget {
                                   showDialog(
                                     context: context,
                                     builder: (context) {
-                                      return 
-                                          ShowAlertDialog(
-                                              title: "Delete",
-                                              content:
-                                                  "Do want to delete ${valuesList[0]} from $categoryName ?",
-                                              onPressedOk: () {
-                                                deleteFromCategory(context);
-                                                Navigator.of(context).pop();
-                                              });
+                                      return ShowAlertDialog(
+                                          title: "Delete",
+                                          content:
+                                              "Do want to delete ${valuesList[0]} from $categoryName ?",
+                                          onPressedOk: () {
+                                            deleteFromCategory(context);
+                                            Navigator.of(context).pop();
+                                          });
                                     },
                                   );
                                 },
@@ -127,7 +126,7 @@ class DisplayItemWithPhotos extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 5),
-              ButtomOfItem(
+              BottomOfItem(
                 categoryName: categoryName,
                 labelList: labelList,
                 valuesList: valuesList,

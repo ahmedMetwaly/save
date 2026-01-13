@@ -3,10 +3,9 @@ import 'package:provider/provider.dart';
 import 'package:save/view/screens/home.dart';
 
 import '../../../../controller/my_provider.dart';
-import '../../../../model/cach_helper.dart';
+import '../../../../model/cash_helper.dart';
 import '../../../../model/database.dart';
 import '../../components/input_field.dart';
-
 
 class SaveToCategory extends StatelessWidget {
   const SaveToCategory({super.key});
@@ -17,8 +16,8 @@ class SaveToCategory extends StatelessWidget {
     TextEditingController titleController = TextEditingController();
     GlobalKey<FormState> formKey = GlobalKey<FormState>();
     final makeProvider = context.watch<MyProvider>();
-    final cachM = context.watch<CachHelper>();
-    final cachR = context.read<CachHelper>();
+    final cachM = context.watch<CashHelper>();
+    final cachR = context.read<CashHelper>();
 
     void insertToCategory() {
       Scaffold.of(context).showBottomSheet(
@@ -64,7 +63,7 @@ class SaveToCategory extends StatelessWidget {
                             value.database,
                             context,
                             categoryName: categoryNameController.text,
-                            fields: ["title","link"].toString(),
+                            fields: ["title", "link"].toString(),
                             withImage: "false",
                             content:
                                 "(title, link)(${titleController.text.trim()}, ${makeProvider.sharedData.trim()})",
@@ -81,8 +80,7 @@ class SaveToCategory extends StatelessWidget {
                           makeProvider.restInputs();
                         }
                       },
-                      child: const Text(
-                          "Add"),
+                      child: const Text("Add"),
                     ),
                   ),
                 ],
@@ -94,7 +92,7 @@ class SaveToCategory extends StatelessWidget {
     }
 
     return ElevatedButton(
-      onPressed: ()  {
+      onPressed: () {
         insertToCategory();
         //Navigator.of(context).pop();
         //Navigator.of(context).pushNamed(Home.routeName);

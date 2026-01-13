@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 import 'package:provider/provider.dart';
-import 'package:save/model/cach_helper.dart';
+import 'package:save/model/cash_helper.dart';
 import 'package:save/model/database.dart';
 import 'package:save/view/screens/add_category.dart';
 import 'package:save/view/screens/social_media/display_social_media.dart';
@@ -22,7 +22,7 @@ class Home extends StatelessWidget {
         List<dynamic> categoryNames = value.data.map((category) {
           return category["categoryName"];
         }).toList();
-        var read = context.read<CachHelper>();
+        var read = context.read<CashHelper>();
         final isFirstTime = read.isFirstTime == null
             ? true
             : read.isFirstTime == true

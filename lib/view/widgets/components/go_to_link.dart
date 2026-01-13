@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:save/model/cach_helper.dart';
+import 'package:save/model/cash_helper.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class GoToLink extends StatelessWidget {
@@ -18,12 +18,12 @@ class GoToLink extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final read = context.read<CachHelper>();
+    final read = context.read<CashHelper>();
     return ElevatedButton(
       onPressed: () => _launchUrl(url),
       style: ButtonStyle(
         backgroundColor:
-            MaterialStatePropertyAll(Theme.of(context).primaryColor),
+            WidgetStatePropertyAll(Theme.of(context).primaryColor),
       ),
       child: Container(
           //width: double.infinity,

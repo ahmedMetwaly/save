@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:save/controller/my_provider.dart';
-import 'package:save/model/cach_helper.dart';
+import 'package:save/model/cash_helper.dart';
 import 'package:save/model/database.dart';
 import '../widgets/add_category_widgtes/contains_image.dart';
 import '../widgets/add_category_widgtes/fields.dart';
@@ -59,8 +59,8 @@ class _AddCategoryState extends State<AddCategory> {
                   builder: (ctxE, value, child) {
                     final read = context.read<MySql>();
                     final make = context.watch<MySql>();
-                    final cachM = context.watch<CachHelper>();
-                    final cachR = context.read<CachHelper>();
+                    final cachM = context.watch<CashHelper>();
+                    final cachR = context.read<CashHelper>();
                     return ElevatedButton(
                       onPressed: () async {
                         if (formKey.currentState!.validate()) {
@@ -78,8 +78,9 @@ class _AddCategoryState extends State<AddCategory> {
                             categoryName.text = "";
                             await cachM.setPref(cachR.kIsFirstTime, false);
                             await cachR.loadPref();
-                           // ignore: use_build_context_synchronously
-                           Navigator.of(context).popAndPushNamed(Home.routeName);
+                            // ignore: use_build_context_synchronously
+                            Navigator.of(context)
+                                .popAndPushNamed(Home.routeName);
                           });
                           value.restInputs();
                         }

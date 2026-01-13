@@ -1,0 +1,412 @@
+﻿Initialized native services in: C:\Users\Ahmed El-sayed\.gradle\native
+Initialized jansi services in: C:\Users\Ahmed El-sayed\.gradle\native
+Received JVM installation metadata from 'C:\Program Files\Eclipse Adoptium\jdk-21.0.8.9-hotspot': {JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-21.0.8.9-hotspot, JAVA_VERSION=21.0.8, JAVA_VENDOR=Eclipse Adoptium, RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=21.0.8+9-LTS, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=21.0.8+9-LTS, VM_VENDOR=Eclipse Adoptium, OS_ARCH=amd64}
+Found daemon DaemonInfo{pid=13780, address=[e7e62cd1-3553-48ba-b10b-e339fe78bfcc port:57805, addresses:[/127.0.0.1]], state=Idle, lastBusy=1768336162257, context=DefaultDaemonContext[uid=10d19135-1ecd-45bc-809a-91bc9cc50a43,javaHome=C:\Program Files\Android\Android Studio\jbr,daemonRegistryDir=C:\Users\Ahmed El-sayed\.gradle\daemon,pid=13780,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-Xmx1536M,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]} however its context does not match the desired criteria.
+Java home is different.
+Wanted: DefaultDaemonContext[uid=null,javaHome=C:\Program Files\Eclipse Adoptium\jdk-21.0.8.9-hotspot,daemonRegistryDir=C:\Users\Ahmed El-sayed\.gradle\daemon,pid=16792,idleTimeout=null,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-Xmx1536M,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]
+Actual: DefaultDaemonContext[uid=10d19135-1ecd-45bc-809a-91bc9cc50a43,javaHome=C:\Program Files\Android\Android Studio\jbr,daemonRegistryDir=C:\Users\Ahmed El-sayed\.gradle\daemon,pid=13780,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-Xmx1536M,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]
+
+  Looking for a different daemon...
+The client will now receive all logging from the daemon (pid: 1552). The daemon log file: C:\Users\Ahmed El-sayed\.gradle\daemon\8.5\daemon-1552.out.log
+Starting 3rd build in daemon [uptime: 15 mins 31.1 secs, performance: 99%, GC rate: 0.00/s, heap usage: 0% of 1.5 GiB]
+Using 4 worker leases.
+Now considering [D:\save\android] as hierarchies to watch
+Watching the file system is configured to be enabled if available
+File system watching is active
+Invalidating in-memory cache of D:\save\android\.gradle\8.5\checksums\md5-checksums.bin
+Invalidating in-memory cache of D:\save\android\.gradle\8.5\checksums\sha1-checksums.bin
+Invalidating in-memory cache of D:\save\android\.gradle\8.5\checksums\sha256-checksums.bin
+Invalidating in-memory cache of D:\save\android\.gradle\8.5\checksums\sha512-checksums.bin
+Invalidating in-memory cache of D:\save\android\.gradle\8.5\fileHashes\fileHashes.bin
+Invalidating in-memory cache of D:\save\android\.gradle\8.5\fileHashes\resourceHashesCache.bin
+Starting Build
+Invalidating in-memory cache of C:\Users\Ahmed El-sayed\.gradle\caches\8.5\fileHashes\fileHashes.bin
+Invalidating in-memory cache of C:\Users\Ahmed El-sayed\.gradle\caches\8.5\fileHashes\resourceHashesCache.bin
+Invalidating in-memory cache of C:\Users\Ahmed El-sayed\.gradle\caches\journal-1\file-access.bin
+Now considering [C:\src\flutter\packages\flutter_tools\gradle, D:\save\android] as hierarchies to watch
+Skipping Kotlin DSL script compilation (Settings/TopLevel/stage1) as it is up-to-date.
+
+> Configure project :gradle
+Evaluating project ':gradle' using build file 'C:\src\flutter\packages\flutter_tools\gradle\build.gradle.kts'.
+Caching disabled for Kotlin DSL plugin specs accessors for classpath '88f21b562c7d422f7231428dbdb6eb94' because:
+  Build cache is disabled
+Skipping Kotlin DSL plugin specs accessors for classpath '88f21b562c7d422f7231428dbdb6eb94' as it is up-to-date.
+Caching disabled for Kotlin DSL script compilation (Project/TopLevel/stage1) because:
+  Build cache is disabled
+Skipping Kotlin DSL script compilation (Project/TopLevel/stage1) as it is up-to-date.
+Using Kotlin Gradle Plugin gradle81 variant
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+file or directory 'C:\src\flutter\packages\flutter_tools\gradle\src\main\java', not found
+Caching disabled for Kotlin DSL accessors for project ':gradle' because:
+  Build cache is disabled
+Skipping Kotlin DSL accessors for project ':gradle' as it is up-to-date.
+Caching disabled for Kotlin DSL script compilation (Project/TopLevel/stage2) because:
+  Build cache is disabled
+Skipping Kotlin DSL script compilation (Project/TopLevel/stage2) as it is up-to-date.
+Resolve mutations for :gradle:checkKotlinGradlePluginConfigurationErrors (Thread[#85,included builds,5,main]) started.
+:gradle:checkKotlinGradlePluginConfigurationErrors (Thread[#88,Execution worker Thread 3,5,main]) started.
+
+> Task :gradle:checkKotlinGradlePluginConfigurationErrors
+Caching disabled for task ':gradle:checkKotlinGradlePluginConfigurationErrors' because:
+  Build cache is disabled
+Task ':gradle:checkKotlinGradlePluginConfigurationErrors' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Resolve mutations for :gradle:compileKotlin (Thread[#88,Execution worker Thread 3,5,main]) started.
+:gradle:compileKotlin (Thread[#85,included builds,5,main]) started.
+
+> Task :gradle:compileKotlin UP-TO-DATE
+Transforming gradle-api-8.5.jar with ClasspathEntrySnapshotTransform
+Transforming groovy-3.0.17.jar with ClasspathEntrySnapshotTransform
+Transforming groovy-ant-3.0.17.jar with ClasspathEntrySnapshotTransform
+Transforming groovy-astbuilder-3.0.17.jar with ClasspathEntrySnapshotTransform
+Transforming groovy-console-3.0.17.jar with ClasspathEntrySnapshotTransform
+Transforming groovy-datetime-3.0.17.jar with ClasspathEntrySnapshotTransform
+Invalidating in-memory cache of C:\Users\Ahmed El-sayed\.gradle\caches\8.5\executionHistory\executionHistory.bin
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\groovy-3.0.17.jar because:
+  Build cache is disabled
+Transforming groovy-dateutil-3.0.17.jar with ClasspathEntrySnapshotTransform
+Transforming groovy-groovydoc-3.0.17.jar with ClasspathEntrySnapshotTransform
+Transforming groovy-json-3.0.17.jar with ClasspathEntrySnapshotTransform
+Transforming groovy-nio-3.0.17.jar with ClasspathEntrySnapshotTransform
+Transforming groovy-sql-3.0.17.jar with ClasspathEntrySnapshotTransform
+Transforming groovy-templates-3.0.17.jar with ClasspathEntrySnapshotTransform
+Transforming groovy-test-3.0.17.jar with ClasspathEntrySnapshotTransform
+Transforming groovy-xml-3.0.17.jar with ClasspathEntrySnapshotTransform
+Transforming javaparser-core-3.17.0.jar with ClasspathEntrySnapshotTransform
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\groovy-3.0.17.jar as it is up-to-date.
+Transforming kotlin-stdlib-1.9.20.jar with ClasspathEntrySnapshotTransform
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\groovy-ant-3.0.17.jar because:
+  Build cache is disabled
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\8.5\generated-gradle-jars\gradle-api-8.5.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\groovy-ant-3.0.17.jar as it is up-to-date.
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\8.5\generated-gradle-jars\gradle-api-8.5.jar as it is up-to-date.
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\groovy-console-3.0.17.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\groovy-console-3.0.17.jar as it is up-to-date.
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\groovy-astbuilder-3.0.17.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\groovy-astbuilder-3.0.17.jar as it is up-to-date.
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\groovy-datetime-3.0.17.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\groovy-datetime-3.0.17.jar as it is up-to-date.
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\groovy-dateutil-3.0.17.jar because:
+  Build cache is disabled
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\groovy-groovydoc-3.0.17.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\groovy-dateutil-3.0.17.jar as it is up-to-date.
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\groovy-groovydoc-3.0.17.jar as it is up-to-date.
+Transforming kotlin-reflect-1.9.20.jar with ClasspathEntrySnapshotTransform
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\groovy-json-3.0.17.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\groovy-json-3.0.17.jar as it is up-to-date.
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\groovy-sql-3.0.17.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\groovy-sql-3.0.17.jar as it is up-to-date.
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\groovy-nio-3.0.17.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\groovy-nio-3.0.17.jar as it is up-to-date.
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\groovy-templates-3.0.17.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\groovy-templates-3.0.17.jar as it is up-to-date.
+Transforming gradle-installation-beacon-8.5.jar with ClasspathEntrySnapshotTransform
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\groovy-test-3.0.17.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\groovy-test-3.0.17.jar as it is up-to-date.
+Transforming gradle-kotlin-dsl-extensions-8.5.jar with ClasspathEntrySnapshotTransform
+Transforming gradle-kotlin-dsl-8.5.jar with ClasspathEntrySnapshotTransform
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\groovy-xml-3.0.17.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\groovy-xml-3.0.17.jar as it is up-to-date.
+Transforming gradle-kotlin-dsl-shared-runtime-8.5.jar with ClasspathEntrySnapshotTransform
+Transforming gradle-kotlin-dsl-tooling-models-8.5.jar with ClasspathEntrySnapshotTransform
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\javaparser-core-3.17.0.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\javaparser-core-3.17.0.jar as it is up-to-date.
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\kotlin-stdlib-1.9.20.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\kotlin-stdlib-1.9.20.jar as it is up-to-date.
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\kotlin-reflect-1.9.20.jar because:
+  Build cache is disabled
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\gradle-installation-beacon-8.5.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\kotlin-reflect-1.9.20.jar as it is up-to-date.
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\gradle-installation-beacon-8.5.jar as it is up-to-date.
+Transforming annotation-jvm-1.9.1.jar with ClasspathEntrySnapshotTransform
+Transforming gradle-8.9.1.jar with ClasspathEntrySnapshotTransform
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\gradle-kotlin-dsl-extensions-8.5.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\gradle-kotlin-dsl-extensions-8.5.jar as it is up-to-date.
+Transforming kotlin-reflect-1.9.20.jar with ClasspathEntrySnapshotTransform
+Transforming kotlinx-serialization-json-jvm-1.4.0.jar with ClasspathEntrySnapshotTransform
+Transforming kotlinx-serialization-core-jvm-1.4.0.jar with ClasspathEntrySnapshotTransform
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\gradle-kotlin-dsl-shared-runtime-8.5.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\gradle-kotlin-dsl-shared-runtime-8.5.jar as it is up-to-date.
+Transforming kotlin-stdlib-jdk8-1.8.0.jar with ClasspathEntrySnapshotTransform
+Transforming kotlin-stdlib-jdk7-1.8.0.jar with ClasspathEntrySnapshotTransform
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\gradle-kotlin-dsl-tooling-models-8.5.jar because:
+  Build cache is disabled
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\gradle-kotlin-dsl-8.5.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\gradle-kotlin-dsl-tooling-models-8.5.jar as it is up-to-date.
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\wrapper\dists\gradle-8.5-all\3zlzzgtsutfj0pbojr50n2l7z\gradle-8.5\lib\gradle-kotlin-dsl-8.5.jar as it is up-to-date.
+Transforming kotlin-stdlib-1.9.24.jar with ClasspathEntrySnapshotTransform
+Transforming kotlin-gradle-plugin-1.8.0-gradle76.jar with ClasspathEntrySnapshotTransform
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\androidx.annotation\annotation-jvm\1.9.1\b17951747e38bf3986a24431b9ba0d039958aa5f\annotation-jvm-1.9.1.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\androidx.annotation\annotation-jvm\1.9.1\b17951747e38bf3986a24431b9ba0d039958aa5f\annotation-jvm-1.9.1.jar as it is up-to-date.
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\com.android.tools.build\gradle\8.9.1\4e50fe7802406421df7b7165d5a8bcbb2762ff0f\gradle-8.9.1.jar because:
+  Build cache is disabled
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlinx\kotlinx-serialization-json-jvm\1.4.0\cfa3e57d044a20e5c9e4561a997df823e2f1c81a\kotlinx-serialization-json-jvm-1.4.0.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\com.android.tools.build\gradle\8.9.1\4e50fe7802406421df7b7165d5a8bcbb2762ff0f\gradle-8.9.1.jar as it is up-to-date.
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlinx\kotlinx-serialization-json-jvm\1.4.0\cfa3e57d044a20e5c9e4561a997df823e2f1c81a\kotlinx-serialization-json-jvm-1.4.0.jar as it is up-to-date.
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jdk8\1.8.0\ed04f49e186a116753ad70d34f0ac2925d1d8020\kotlin-stdlib-jdk8-1.8.0.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jdk8\1.8.0\ed04f49e186a116753ad70d34f0ac2925d1d8020\kotlin-stdlib-jdk8-1.8.0.jar as it is up-to-date.
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jdk7\1.8.0\3c91271347f678c239607abb676d4032a7898427\kotlin-stdlib-jdk7-1.8.0.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jdk7\1.8.0\3c91271347f678c239607abb676d4032a7898427\kotlin-stdlib-jdk7-1.8.0.jar as it is up-to-date.
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.9.24\9928532f12c66ad816a625b3f9984f8368ca6d2b\kotlin-stdlib-1.9.24.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.9.24\9928532f12c66ad816a625b3f9984f8368ca6d2b\kotlin-stdlib-1.9.24.jar as it is up-to-date.
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlinx\kotlinx-serialization-core-jvm\1.4.0\9b00d574374ae0201a505ab54c7744586866dc27\kotlinx-serialization-core-jvm-1.4.0.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlinx\kotlinx-serialization-core-jvm\1.4.0\9b00d574374ae0201a505ab54c7744586866dc27\kotlinx-serialization-core-jvm-1.4.0.jar as it is up-to-date.
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-gradle-plugin\1.8.0\d79a079634e8d3bd92c594b224f4de2086bb4a10\kotlin-gradle-plugin-1.8.0-gradle76.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-gradle-plugin\1.8.0\d79a079634e8d3bd92c594b224f4de2086bb4a10\kotlin-gradle-plugin-1.8.0-gradle76.jar as it is up-to-date.
+Transforming builder-8.9.1.jar with ClasspathEntrySnapshotTransform
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\com.android.tools.build\builder\8.9.1\5dfef4d0bb66f0f2df305d0dbfe1dc014c2ceca4\builder-8.9.1.jar because:
+  Build cache is disabled
+Transforming builder-model-8.9.1.jar with ClasspathEntrySnapshotTransform
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\com.android.tools.build\builder\8.9.1\5dfef4d0bb66f0f2df305d0dbfe1dc014c2ceca4\builder-8.9.1.jar as it is up-to-date.
+Transforming gradle-api-8.9.1.jar with ClasspathEntrySnapshotTransform
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\com.android.tools.build\builder-model\8.9.1\a749b3ff28c2bf555e7168f0f2ded564ac07dd4\builder-model-8.9.1.jar because:
+  Build cache is disabled
+Transforming kotlin-gradle-plugin-model-1.8.0.jar with ClasspathEntrySnapshotTransform
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\com.android.tools.build\builder-model\8.9.1\a749b3ff28c2bf555e7168f0f2ded564ac07dd4\builder-model-8.9.1.jar as it is up-to-date.
+Transforming kotlin-gradle-plugin-api-1.8.0-gradle76.jar with ClasspathEntrySnapshotTransform
+Transforming kotlin-gradle-plugin-api-1.8.0.jar with ClasspathEntrySnapshotTransform
+Transforming kotlin-tooling-core-1.8.0.jar with ClasspathEntrySnapshotTransform
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\com.android.tools.build\gradle-api\8.9.1\cb1f5854bebf3b56c02cd747c7530d73c098ff99\gradle-api-8.9.1.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\com.android.tools.build\gradle-api\8.9.1\cb1f5854bebf3b56c02cd747c7530d73c098ff99\gradle-api-8.9.1.jar as it is up-to-date.
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-gradle-plugin-model\1.8.0\9da2fce7af0a94348001ee8dd20a82167f5de284\kotlin-gradle-plugin-model-1.8.0.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-gradle-plugin-model\1.8.0\9da2fce7af0a94348001ee8dd20a82167f5de284\kotlin-gradle-plugin-model-1.8.0.jar as it is up-to-date.
+Transforming annotations-13.0.jar with ClasspathEntrySnapshotTransform
+Transforming manifest-merger-31.9.1.jar with ClasspathEntrySnapshotTransform
+Transforming zipflinger-8.9.1.jar with ClasspathEntrySnapshotTransform
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-gradle-plugin-api\1.8.0\29f79a3bb109e05b07f1d2893074ab176a4276e0\kotlin-gradle-plugin-api-1.8.0-gradle76.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-gradle-plugin-api\1.8.0\29f79a3bb109e05b07f1d2893074ab176a4276e0\kotlin-gradle-plugin-api-1.8.0-gradle76.jar as it is up-to-date.
+Transforming apksig-8.9.1.jar with ClasspathEntrySnapshotTransform
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-gradle-plugin-api\1.8.0\29f79a3bb109e05b07f1d2893074ab176a4276e0\kotlin-gradle-plugin-api-1.8.0.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-gradle-plugin-api\1.8.0\29f79a3bb109e05b07f1d2893074ab176a4276e0\kotlin-gradle-plugin-api-1.8.0.jar as it is up-to-date.
+Transforming apkzlib-8.9.1.jar with ClasspathEntrySnapshotTransform
+Transforming javawriter-2.5.0.jar with ClasspathEntrySnapshotTransform
+Transforming asm-9.7.jar with ClasspathEntrySnapshotTransform
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\13.0\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9\annotations-13.0.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\13.0\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9\annotations-13.0.jar as it is up-to-date.
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\com.android.tools.build\manifest-merger\31.9.1\2bdbfcb2117fe7e47dc8eb01eb1911618c2d2e91\manifest-merger-31.9.1.jar because:
+  Build cache is disabled
+Transforming kotlin-native-utils-1.8.0.jar with ClasspathEntrySnapshotTransform
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-tooling-core\1.8.0\da3a4252e4b48833eb566227b2baecbaede8993\kotlin-tooling-core-1.8.0.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-tooling-core\1.8.0\da3a4252e4b48833eb566227b2baecbaede8993\kotlin-tooling-core-1.8.0.jar as it is up-to-date.
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\com.android.tools.build\manifest-merger\31.9.1\2bdbfcb2117fe7e47dc8eb01eb1911618c2d2e91\manifest-merger-31.9.1.jar as it is up-to-date.
+Transforming kotlin-project-model-1.8.0.jar with ClasspathEntrySnapshotTransform
+Transforming kotlin-util-io-1.8.0.jar with ClasspathEntrySnapshotTransform
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\com.android\zipflinger\8.9.1\de8e3267995699af356740cf562cbedb485f5763\zipflinger-8.9.1.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\com.android\zipflinger\8.9.1\de8e3267995699af356740cf562cbedb485f5763\zipflinger-8.9.1.jar as it is up-to-date.
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\com.android.tools.build\apksig\8.9.1\f005788487574c7d6ba23dea63bf8cb3a4f164a6\apksig-8.9.1.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\com.android.tools.build\apksig\8.9.1\f005788487574c7d6ba23dea63bf8cb3a4f164a6\apksig-8.9.1.jar as it is up-to-date.
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\com.android.tools.build\apkzlib\8.9.1\d656b52facbb301b8bdc1e40a5ae008bcf335fe9\apkzlib-8.9.1.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\com.android.tools.build\apkzlib\8.9.1\d656b52facbb301b8bdc1e40a5ae008bcf335fe9\apkzlib-8.9.1.jar as it is up-to-date.
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\com.squareup\javawriter\2.5.0\81241ff7078ef14f42ea2a8995fa09c096256e6b\javawriter-2.5.0.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\com.squareup\javawriter\2.5.0\81241ff7078ef14f42ea2a8995fa09c096256e6b\javawriter-2.5.0.jar as it is up-to-date.
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm\9.7\73d7b3086e14beb604ced229c302feff6449723\asm-9.7.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm\9.7\73d7b3086e14beb604ced229c302feff6449723\asm-9.7.jar as it is up-to-date.
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-project-model\1.8.0\2b8d20018168339835a79512f46f3251ff09caf5\kotlin-project-model-1.8.0.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-project-model\1.8.0\2b8d20018168339835a79512f46f3251ff09caf5\kotlin-project-model-1.8.0.jar as it is up-to-date.
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-native-utils\1.8.0\73361435f42e1fecbd81f686ccaa8aa1c498b941\kotlin-native-utils-1.8.0.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-native-utils\1.8.0\73361435f42e1fecbd81f686ccaa8aa1c498b941\kotlin-native-utils-1.8.0.jar as it is up-to-date.
+Caching disabled for ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-util-io\1.8.0\1d7ca3cc3c24111ca8a12e29b10d6df0f778afd8\kotlin-util-io-1.8.0.jar because:
+  Build cache is disabled
+Skipping ClasspathEntrySnapshotTransform: C:\Users\Ahmed El-sayed\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-util-io\1.8.0\1d7ca3cc3c24111ca8a12e29b10d6df0f778afd8\kotlin-util-io-1.8.0.jar as it is up-to-date.
+Caching disabled for task ':gradle:compileKotlin' because:
+  Build cache is disabled
+Skipping task ':gradle:compileKotlin' as it is up-to-date.
+Resolve mutations for :gradle:compileJava (Thread[#88,Execution worker Thread 3,5,main]) started.
+:gradle:compileJava (Thread[#88,Execution worker Thread 3,5,main]) started.
+
+> Task :gradle:compileJava NO-SOURCE
+Skipping task ':gradle:compileJava' as it has no source files and no previous output files.
+Resolve mutations for :gradle:compileGroovy (Thread[#88,Execution worker Thread 3,5,main]) started.
+:gradle:compileGroovy (Thread[#88,Execution worker Thread 3,5,main]) started.
+
+> Task :gradle:compileGroovy NO-SOURCE
+Skipping task ':gradle:compileGroovy' as it has no source files and no previous output files.
+Resolve mutations for :gradle:pluginDescriptors (Thread[#88,Execution worker Thread 3,5,main]) started.
+:gradle:pluginDescriptors (Thread[#88,Execution worker Thread 3,5,main]) started.
+
+> Task :gradle:pluginDescriptors UP-TO-DATE
+Caching disabled for task ':gradle:pluginDescriptors' because:
+  Build cache is disabled
+Skipping task ':gradle:pluginDescriptors' as it is up-to-date.
+Resolve mutations for :gradle:processResources (Thread[#88,Execution worker Thread 3,5,main]) started.
+:gradle:processResources (Thread[#88,Execution worker Thread 3,5,main]) started.
+
+> Task :gradle:processResources UP-TO-DATE
+Caching disabled for task ':gradle:processResources' because:
+  Build cache is disabled
+Skipping task ':gradle:processResources' as it is up-to-date.
+Resolve mutations for :gradle:classes (Thread[#88,Execution worker Thread 3,5,main]) started.
+:gradle:classes (Thread[#85,included builds,5,main]) started.
+
+> Task :gradle:classes UP-TO-DATE
+Skipping task ':gradle:classes' as it has no actions.
+Resolve mutations for :gradle:jar (Thread[#85,included builds,5,main]) started.
+:gradle:jar (Thread[#88,Execution worker Thread 3,5,main]) started.
+
+> Task :gradle:jar UP-TO-DATE
+Caching disabled for task ':gradle:jar' because:
+  Build cache is disabled
+Skipping task ':gradle:jar' as it is up-to-date.
+Skipping Kotlin DSL script compilation (Settings/ScriptPlugin/stage1) as it is up-to-date.
+Settings evaluated using settings file 'D:\save\android\settings.gradle'.
+Projects loaded. Root project using build file 'D:\save\android\build.gradle'.
+Included projects: [root project 'android', project ':app', project ':connectivity_plus', project ':flutter_plugin_android_lifecycle', project ':image_picker_android', project ':path_provider_android', project ':share_plus', project ':shared_preferences_android', project ':sqflite', project ':url_launcher_android']
+
+> Configure project :
+Evaluating root project 'android' using build file 'D:\save\android\build.gradle'.
+
+> Configure project :app
+Evaluating project ':app' using build file 'D:\save\android\app\build.gradle'.
+Using default execution profile
+Using Kotlin Gradle Plugin gradle76 variant
+Caching disabled for Kotlin DSL plugin specs accessors for classpath '839a980ca006b1a4f1d70b562a46a0d4' because:
+  Build cache is disabled
+Skipping Kotlin DSL plugin specs accessors for classpath '839a980ca006b1a4f1d70b562a46a0d4' as it is up-to-date.
+Caching disabled for Kotlin DSL script compilation (Project/ScriptPlugin/stage1) because:
+  Build cache is disabled
+Skipping Kotlin DSL script compilation (Project/ScriptPlugin/stage1) as it is up-to-date.
+.\gradlew.bat : Warning: 
+Flutter support for your 
+project's Gradle version 
+(8.5.0) will soon be 
+dropped. Please upgrade your 
+Gradle version to a version 
+of at least 8.7.0 soon.
+At line:1 char:1
++ .\gradlew.bat 
+assembleDebug --info 2>&1 | 
+Out-File -FilePath gradle_o 
+...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: (Warning  
+  : Flutte...ast 8.7.0 soo   
+ n.:String) [], RemoteExc    
+eption
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+Alternatively, use the flag "
+--android-skip-build-dependen
+cy-validation" to bypass 
+this check.
+
+Potential fix: Your 
+project's gradle version is 
+typically defined in the 
+gradle wrapper file. By 
+default, this can be found 
+at D:\save\android/gradle/wra
+pper/gradle-wrapper.propertie
+s. 
+For more information, see htt
+ps://docs.gradle.org/current/
+userguide/gradle_wrapper.html
+.
+
+
+FAILURE: Build failed with 
+an exception.
+
+* Where:
+Build file 'D:\save\android\a
+pp\build.gradle' line: 4
+
+* What went wrong:
+An exception occurred 
+applying plugin request [id: 
+'dev.flutter.flutter-gradle-p
+lugin']
+> Failed to apply plugin 'dev
+.flutter.flutter-gradle-plugi
+n'.
+   > Error: Your project's 
+Android Gradle Plugin 
+version (Android Gradle 
+Plugin version 8.1.0) is 
+lower than Flutter's minimum 
+supported version of Android 
+Gradle Plugin version 8.1.1. 
+Please upgrade your Android 
+Gradle Plugin version. 
+     Alternatively, use the 
+flag "--android-skip-build-de
+pendency-validation" to 
+bypass this check.
+     
+     Potential fix: Your 
+project's AGP version is 
+typically defined in the 
+plugins block of the 
+`settings.gradle` file (D:\sa
+ve\android/settings.gradle), 
+by a plugin with the id of 
+com.android.application. 
+     If you don't see a 
+plugins block, your project 
+was likely created with an 
+older template version. In 
+this case it is most likely 
+defined in the top-level 
+build.gradle file (D:\save\an
+droid/build.gradle) by the 
+following line in the 
+dependencies block of the 
+buildscript: "classpath 'com.
+android.tools.build:gradle:<v
+ersion>'".
+
+
+* Try:
+> Run with --stacktrace 
+option to get the stack 
+trace.
+> Run with --debug option to 
+get more log output.
+> Run with --scan to get 
+full insights.
+> Get more help at 
+https://help.gradle.org.
+
+BUILD FAILED in 29s
+5 actionable tasks: 1 executed, 4 up-to-date
+Watched directory hierarchies: [C:\src\flutter\packages\flutter_tools\gradle]

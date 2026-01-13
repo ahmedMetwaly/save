@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 import "package:provider/provider.dart";
-import "package:save/model/cach_helper.dart";
+import "package:save/model/cash_helper.dart";
 import "package:save/view/screens/add_category.dart";
 import "package:save/view/screens/fav.dart";
 import "../../screens/social_media/display_social_media.dart";
@@ -9,7 +9,7 @@ class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
   @override
   Widget build(BuildContext context) {
-    return Consumer<CachHelper>(
+    return Consumer<CashHelper>(
       builder: (context, value, child) => SafeArea(
         child: Drawer(
           backgroundColor: Theme.of(context).canvasColor,

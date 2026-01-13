@@ -56,18 +56,18 @@ class MyProvider with ChangeNotifier {
   }
  */
   Future<void> checkConnection() async {
-    isConnected = await InternetConnectionChecker().hasConnection;
+    isConnected = await InternetConnectionChecker.instance.hasConnection;
     //print("isConnected: $isConnected");
     notifyListeners();
   }
 
 
   Future<void> execute() async {
-     isConnected = await InternetConnectionChecker().hasConnection;
+     isConnected = await InternetConnectionChecker.instance.hasConnection;
    
     // actively listen for status updates
     final StreamSubscription<InternetConnectionStatus> listener =
-        InternetConnectionChecker().onStatusChange.listen(
+        InternetConnectionChecker.instance.onStatusChange.listen(
       (InternetConnectionStatus status) {
         switch (status) {
           case InternetConnectionStatus.connected:
@@ -76,6 +76,11 @@ class MyProvider with ChangeNotifier {
             // print('Data connection is available.');
             break;
           case InternetConnectionStatus.disconnected:
+            // ignore: avoid_print
+            isConnected = false;
+            //print('You are disconnected from the internet.');
+            break;
+          case InternetConnectionStatus.slow:
             // ignore: avoid_print
             isConnected = false;
             //print('You are disconnected from the internet.');

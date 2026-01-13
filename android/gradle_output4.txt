@@ -1,0 +1,173 @@
+﻿> Task :gradle:checkKotlinGradlePluginConfigurationErrors
+> Task :gradle:compileKotlin UP-TO-DATE
+> Task :gradle:compileJava NO-SOURCE
+> Task :gradle:compileGroovy NO-SOURCE
+> Task :gradle:pluginDescriptors UP-TO-DATE
+> Task :gradle:processResources UP-TO-DATE
+> Task :gradle:classes UP-TO-DATE
+> Task :gradle:jar UP-TO-DATE
+
+> Configure project :app
+.\gradlew.bat : Warning: 
+Flutter support for your 
+project's Kotlin version 
+(1.9.0) will soon be 
+dropped. Please upgrade your 
+Kotlin version to a version 
+of at least 2.1.0 soon.
+At line:1 char:1
++ .\gradlew.bat 
+assembleDebug 2>&1 | 
+Out-File -FilePath 
+gradle_output4. ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~
+    + CategoryInfo           
+   : NotSpecified: (Warning  
+  : Flutte...ast 2.1.0 soo   
+ n.:String) [], RemoteExc    
+eption
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+Alternatively, use the flag "
+--android-skip-build-dependen
+cy-validation" to bypass 
+this check.
+
+Potential fix: Your 
+project's KGP version is 
+typically defined in the 
+plugins block of the 
+`settings.gradle` file (D:\sa
+ve\android/settings.gradle), 
+by a plugin with the id of or
+g.jetbrains.kotlin.android. 
+If you don't see a plugins 
+block, your project was 
+likely created with an older 
+template version, in which 
+case it is most likely 
+defined in the top-level 
+build.gradle file (D:\save\an
+droid/build.gradle) by the 
+ext.kotlin_version property.
+
+WARNING: We recommend using a newer Android Gradle plugin to use compileSdk = 36
+
+This Android Gradle plugin (8.6.0) was tested up to compileSdk = 35.
+
+You are strongly encouraged to update your project to use a newer
+Android Gradle plugin that has been tested with compileSdk = 36.
+
+If you are already using the latest version of the Android Gradle plugin,
+you may need to wait until a newer version with support for compileSdk = 36 is available.
+
+For more information refer to the compatibility table:
+https://d.android.com/r/tools/api-level-support
+
+To suppress this warning, add/update
+    android.suppressUnsupportedCompileSdk=36
+to this project's gradle.properties.
+
+> Task :app:DebugMinSdkCheck
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+
+> Task :app:compileFlutterBuildDebug
+lib/controller/my_provider.da
+rt:59:25: Error: Couldn't 
+find constructor 
+'InternetConnectionChecker'.
+    isConnected = await Inter
+netConnectionChecker().hasCon
+nection;
+                        
+^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/controller/my_provider.da
+rt:66:26: Error: Couldn't 
+find constructor 
+'InternetConnectionChecker'.
+     isConnected = await Inte
+rnetConnectionChecker().hasCo
+nnection;
+                         
+^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/controller/my_provider.da
+rt:70:9: Error: Couldn't 
+find constructor 
+'InternetConnectionChecker'.
+        InternetConnectionChe
+cker().onStatusChange.listen(
+        
+^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/view/widgets/home_widgets
+/with_photos/item_content/but
+tom_of_item.dart:75:33: 
+Error: Member not found: 
+'Share.shareFiles'.
+                    await 
+Share.shareFiles(
+                             
+   ^^^^^^^^^^
+lib/controller/my_provider.da
+rt:72:17: Error: The type 
+'InternetConnectionStatus' 
+is not exhaustively matched 
+by the switch cases since it 
+doesn't match 'InternetConnec
+tionStatus.slow'.
+ - 
+'InternetConnectionStatus' 
+is from 'package:internet_con
+nection_checker/internet_conn
+ection_checker.dart' ('/C:/Us
+ers/Ahmed%20El-sayed/AppData/
+Local/Pub/Cache/hosted/pub.de
+v/internet_connection_checker
+-3.0.1/lib/internet_connectio
+n_checker.dart').
+Try adding a default case or 
+cases that match 'InternetCon
+nectionStatus.slow'.
+        switch (status) {
+                ^
+Target 
+kernel_snapshot_program 
+failed: Exception
+
+
+> Task :app:compileFlutterBuildDebug FAILED
+
+FAILURE: Build failed with 
+an exception.
+
+* What went wrong:
+Execution failed for task ':a
+pp:compileFlutterBuildDebug'.
+> Process 'command 'C:\src\fl
+utter\bin\flutter.bat'' 
+finished with non-zero exit 
+value 1
+
+* Try:
+> Run with --stacktrace 
+option to get the stack 
+trace.
+> Run with --info or --debug 
+option to get more log 
+output.
+> Run with --scan to get 
+full insights.
+> Get more help at 
+https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.7/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 42s
+7 actionable tasks: 3 executed, 4 up-to-date
