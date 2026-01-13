@@ -7,6 +7,7 @@ import 'package:save/view/screens/add_category.dart';
 import 'package:save/view/screens/social_media/display_social_media.dart';
 import 'package:save/view/widgets/home_widgets/withOut_photos/category_with_out_photos.dart';
 import 'package:save/view/widgets/home_widgets/with_photos/display_item_with_photos.dart';
+import '../../core/theme/app_colors.dart';
 import '../widgets/components/empty_widget.dart';
 import '../widgets/components/loading_data.dart';
 import '../widgets/components/my_app_bar.dart';
@@ -51,7 +52,7 @@ class Home extends StatelessWidget {
                               child: Container(
                                 height: 70.h,
                                 padding: EdgeInsets.all(10.w),
-                                color: Theme.of(context).indicatorColor,
+                                color: AppColors.primaryStart,
                                 child: const Center(
                                   child: Text(
                                     "Social Media",
@@ -76,19 +77,30 @@ class Home extends StatelessWidget {
                           ],
                         ),
                       ),
-                      TextButton.icon(
-                        onPressed: () => Navigator.of(context)
-                            .pushNamed(AddCategory.routeName),
-                        icon: Icon(
-                          Icons.note_add_rounded,
-                          color: Theme.of(context).indicatorColor,
-                          size: 24.sp,
-                        ),
-                        label: Text(
-                          "Add Category ",
-                          style: TextStyle(
-                              fontSize: 18.sp,
-                              color: Theme.of(context).indicatorColor),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 16.w),
+                        child: GestureDetector(
+                          onTap: () => Navigator.of(context)
+                              .pushNamed(AddCategory.routeName),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.add_circle_outline,
+                                size: 20.sp,
+                                color: AppColors.primaryStart,
+                              ),
+                              SizedBox(width: 8.w),
+                              Text(
+                                'Add Category',
+                                style: TextStyle(
+                                  fontSize: 14.sp,
+                                  fontWeight: FontWeight.w600,
+                                  color: AppColors.primaryStart,
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                       value.data.isNotEmpty
