@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:save/model/cash_helper.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -22,23 +23,26 @@ class GoToLink extends StatelessWidget {
     return ElevatedButton(
       onPressed: () => _launchUrl(url),
       style: ButtonStyle(
-        backgroundColor:
-            WidgetStatePropertyAll(Theme.of(context).primaryColor),
+        backgroundColor: WidgetStatePropertyAll(Theme.of(context).primaryColor),
       ),
       child: Container(
           //width: double.infinity,
           alignment: Alignment.center,
-          padding: const EdgeInsets.all(10),
+          padding: EdgeInsets.all(10.w),
           child: Text(
             "Go to link",
             style: read.isDark == null
-                ? Theme.of(context).textTheme.bodyMedium
+                ? Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      fontSize: 16.sp,
+                    )
                 : read.isDark == true
-                    ? Theme.of(context)
-                        .textTheme
-                        .bodyMedium!
-                        .copyWith(color: Theme.of(context).indicatorColor)
-                    : Theme.of(context).textTheme.bodyMedium,
+                    ? Theme.of(context).textTheme.bodyMedium!.copyWith(
+                          color: Theme.of(context).indicatorColor,
+                          fontSize: 16.sp,
+                        )
+                    : Theme.of(context).textTheme.bodyMedium?.copyWith(
+                          fontSize: 16.sp,
+                        ),
           )),
     );
   }

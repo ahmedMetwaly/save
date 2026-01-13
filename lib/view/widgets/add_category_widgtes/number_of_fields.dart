@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 
 import '../../../controller/my_provider.dart';
@@ -19,24 +20,25 @@ class NumberOfFileds extends StatelessWidget {
             style: Theme.of(context)
                 .textTheme
                 .labelMedium!
-                .copyWith(fontSize: 20),
+                .copyWith(fontSize: 20.sp),
           ),
           IconButton(
             onPressed: () => value.changeControllerNumbers(operation: "add"),
             icon: Icon(
               Icons.add_circle_outline_outlined,
-              size: 30,
+              size: 30.sp,
               color: Theme.of(context).primaryColor,
             ),
           ),
-          Text("${value.controllerNumbers}",style: Theme.of(context)
-                .textTheme
-                .labelMedium,),
+          Text(
+            "${value.controllerNumbers}",
+            style: Theme.of(context).textTheme.labelMedium,
+          ),
           IconButton(
             onPressed: () => value.changeControllerNumbers(operation: "minus"),
             icon: Icon(
               Icons.do_not_disturb_on_outlined,
-              size: 30,
+              size: 30.sp,
               color: Theme.of(context).primaryColor,
             ),
           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:save/model/database.dart';
 import 'package:save/view/widgets/components/my_app_bar.dart';
@@ -35,12 +36,12 @@ class FavScreen extends StatelessWidget {
           body: SafeArea(
             child: favContent.isNotEmpty
                 ? Padding(
-                    padding: const EdgeInsets.all(15.0),
+                    padding: EdgeInsets.all(15.0.w),
                     child: SingleChildScrollView(
                       child: Column(children: [
                         SizedBox(
                           width: double.infinity,
-                          height: 44,
+                          height: 44.h,
                           child: ElevatedButton(
                               onPressed: () => value.clearFav(context),
                               child: Text(
@@ -48,8 +49,8 @@ class FavScreen extends StatelessWidget {
                                 style: Theme.of(context).textTheme.bodyMedium,
                               )),
                         ),
-                        const SizedBox(
-                          height: 20,
+                        SizedBox(
+                          height: 20.h,
                         ),
                         ListView.separated(
                             shrinkWrap: true,
@@ -139,7 +140,7 @@ class FavScreen extends StatelessWidget {
                               }
                             },
                             separatorBuilder: (context, index) =>
-                                const SizedBox(height: 10),
+                                SizedBox(height: 10.h),
                             itemCount: favContent.length),
                       ]),
                     ),

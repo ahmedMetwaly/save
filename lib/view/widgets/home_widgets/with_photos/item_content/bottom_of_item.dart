@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
 
@@ -59,14 +60,14 @@ class BottomOfItem extends StatelessWidget {
                 },
                 icon: Icon(
                   Icons.favorite,
-                  size: 30,
+                  size: 30.sp,
                   color: value.favList.any((favItem) =>
                           favItem["content"].toString().contains(title))
                       ? Colors.red
                       : Theme.of(context).primaryColor,
                 ),
                 color: Theme.of(context).primaryColor,
-                splashRadius: 20.0),
+                splashRadius: 20.0.r),
             IconButton(
                 onPressed: () async {
                   try {
@@ -83,9 +84,9 @@ class BottomOfItem extends StatelessWidget {
                     //  print("Error in share $error");
                   }
                 },
-                icon: const Icon(Icons.share, size: 30),
+                icon: Icon(Icons.share, size: 30.sp),
                 color: Theme.of(context).primaryColor,
-                splashRadius: 20.0)
+                splashRadius: 20.0.r)
           ],
         );
       },

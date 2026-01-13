@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:save/controller/my_provider.dart';
 import 'package:save/model/database.dart';
@@ -21,8 +22,8 @@ class BottomSheetContent extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const BottomSheetHead(),
-          const SizedBox(
-            height: 15,
+          SizedBox(
+            height: 15.h,
           ),
           value.dropDownButtonItem == null
               ? const SelectCategory()
@@ -33,7 +34,7 @@ class BottomSheetContent extends StatelessWidget {
                         ListView.separated(
                             shrinkWrap: true,
                             physics: const NeverScrollableScrollPhysics(),
-                            padding: const EdgeInsets.all(15),
+                            padding: EdgeInsets.all(15.w),
                             itemBuilder: (context, index) {
                               return InputField(
                                   controller: readSql.fieldsController[index],
@@ -44,7 +45,7 @@ class BottomSheetContent extends StatelessWidget {
                                   withMaxLines: false);
                             },
                             separatorBuilder: (context, index) =>
-                                const SizedBox(height: 20),
+                                SizedBox(height: 20.h),
                             itemCount: readSql.categoryFields.length),
                         readSql.categoryDetails["withImage"] == "true"
                             ? const DisplayAddPhotos()
@@ -58,4 +59,3 @@ class BottomSheetContent extends StatelessWidget {
     );
   }
 }
-

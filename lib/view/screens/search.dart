@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:save/model/database.dart';
 import 'package:save/view/screens/display_seach_result.dart';
@@ -40,7 +41,7 @@ class _SearchScreenState extends State<SearchScreen> {
     return Scaffold(
       appBar: AppBar(
         title: SizedBox(
-          height: 40,
+          height: 40.h,
           child: TextField(
             controller: controller,
             keyboardType: TextInputType.name,
@@ -63,7 +64,7 @@ class _SearchScreenState extends State<SearchScreen> {
         backgroundColor: Theme.of(context).canvasColor,
       ),
       body: DefaultTextStyle(
-        style: Theme.of(context).textTheme.labelMedium??const TextStyle(),
+        style: Theme.of(context).textTheme.labelMedium ?? const TextStyle(),
         child: SafeArea(
           child: filteredItems.isEmpty || _query == ""
               ? const Center(child: Text("No results found"))
@@ -72,7 +73,7 @@ class _SearchScreenState extends State<SearchScreen> {
                     return ListTile(
                       title: Text(
                         filteredItems[index],
-                       style: Theme.of(context).textTheme.labelMedium,
+                        style: Theme.of(context).textTheme.labelMedium,
                         overflow: TextOverflow.clip,
                       ),
                       onTap: () {

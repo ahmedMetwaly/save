@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:save/model/database.dart';
 import 'package:save/view/widgets/home_widgets/withOut_photos/display_item_with_out_photo.dart';
@@ -48,8 +49,8 @@ class CategoryWithOutPhotos extends StatelessWidget {
               categoryName: categoryName,
             );
           },
-          separatorBuilder: (context, index) => const SizedBox(
-            height: 10,
+          separatorBuilder: (context, index) => SizedBox(
+            height: 10.h,
           ),
         );
       }

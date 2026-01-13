@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:save/view/widgets/components/my_drawer.dart';
 
@@ -30,7 +31,7 @@ class AddToFirstTimeBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(15.0),
+      padding: EdgeInsets.all(15.0.w),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -40,16 +41,16 @@ class AddToFirstTimeBody extends StatelessWidget {
             style: Theme.of(context).textTheme.bodyLarge,
             overflow: TextOverflow.clip,
           ),
-          const SizedBox(
-            height: 40,
+          SizedBox(
+            height: 40.h,
           ),
           Icon(
             Icons.arrow_downward_rounded,
             color: Theme.of(context).primaryColor,
-            size: 90,
+            size: 90.sp,
           ),
-          const SizedBox(
-            height: 40,
+          SizedBox(
+            height: 40.h,
           ),
           ElevatedButton(
             onPressed: () {
@@ -58,7 +59,7 @@ class AddToFirstTimeBody extends StatelessWidget {
             child: Container(
                 width: double.infinity,
                 alignment: Alignment.center,
-                padding: const EdgeInsets.all(10),
+                padding: EdgeInsets.all(10.w),
                 child: Text(
                   "Add Category",
                   style: Theme.of(context).textTheme.bodyMedium,

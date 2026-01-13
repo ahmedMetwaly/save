@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:save/model/cash_helper.dart';
 import 'package:save/model/database.dart';
@@ -48,8 +49,8 @@ class Home extends StatelessWidget {
                               onTap: () => Navigator.of(context)
                                   .pushNamed(DisplaySocialMedia.routeName),
                               child: Container(
-                                height: 70,
-                                padding: const EdgeInsets.all(10),
+                                height: 70.h,
+                                padding: EdgeInsets.all(10.w),
                                 color: Theme.of(context).indicatorColor,
                                 child: const Center(
                                   child: Text(
@@ -66,7 +67,7 @@ class Home extends StatelessWidget {
                                             context,
                                             categoryName: categoryName),
                                         child: Tab(
-                                          iconMargin: const EdgeInsets.all(0),
+                                          iconMargin: EdgeInsets.zero,
                                           text: categoryName,
                                         ),
                                       ))
@@ -81,22 +82,23 @@ class Home extends StatelessWidget {
                         icon: Icon(
                           Icons.note_add_rounded,
                           color: Theme.of(context).indicatorColor,
+                          size: 24.sp,
                         ),
                         label: Text(
                           "Add Category ",
                           style: TextStyle(
-                              fontSize: 18,
+                              fontSize: 18.sp,
                               color: Theme.of(context).indicatorColor),
                         ),
                       ),
                       value.data.isNotEmpty
                           ? Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.only(
-                                    top: 8.0,
-                                    left: 15.0,
-                                    right: 15.0,
-                                    bottom: 60.0),
+                                padding: EdgeInsets.only(
+                                    top: 8.0.h,
+                                    left: 15.0.w,
+                                    right: 15.0.w,
+                                    bottom: 60.0.h),
                                 child: TabBarView(
                                   children: value.data.map((category) {
                                     String content = category["content"];
@@ -137,9 +139,9 @@ class Home extends StatelessWidget {
                                                 },
                                                 itemCount:
                                                     contentList.length - 1,
-                                                separatorBuilder: (context,
-                                                        index) =>
-                                                    const SizedBox(height: 10),
+                                                separatorBuilder:
+                                                    (context, index) =>
+                                                        SizedBox(height: 10.h),
                                               )
                                         : CategoryWithOutPhotos(
                                             content: content,

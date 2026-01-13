@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LoadingData extends StatelessWidget {
   const LoadingData({
@@ -11,19 +12,19 @@ class LoadingData extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-         SizedBox(height: MediaQuery.of(context).size.height * 0.3,),
+        SizedBox(
+          height: 0.3.sh,
+        ),
         CircularProgressIndicator(
           color: Theme.of(context).primaryColor,
           value: 99,
           semanticsLabel: "Loading",
         ),
-        const SizedBox(
-          height: 15,
+        SizedBox(
+          height: 15.h,
         ),
         const Text("Loading")
       ],
     );
-          
-        
   }
 }

@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:save/view/widgets/components/show_alert_dialog.dart';
 
@@ -56,8 +57,8 @@ class DisplayPhotos extends StatelessWidget {
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (context, index) => InkWell(
-                  borderRadius: BorderRadius.circular(10),
-                  radius: 20,
+                  borderRadius: BorderRadius.circular(10.r),
+                  radius: 20.r,
                   onTap: () {
                     watch.openPhoto(context,
                         categoryName: categoryName,
@@ -99,7 +100,7 @@ class DisplayPhotos extends StatelessWidget {
                               ));
                   },
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(10.r),
                     child: Image(
                       image: FileImage(
                         File(imagesList[index].trim().replaceAll("'", "")),
@@ -118,13 +119,13 @@ class DisplayPhotos extends StatelessWidget {
                         }
                       },
                       alignment: Alignment.center,
-                      width: 150,
+                      width: 150.w,
                       fit: BoxFit.cover,
                     ),
                   ),
                 ),
-                separatorBuilder: (context, index) => const SizedBox(
-                  width: 10,
+                separatorBuilder: (context, index) => SizedBox(
+                  width: 10.w,
                 ),
               )
             : const SizedBox();

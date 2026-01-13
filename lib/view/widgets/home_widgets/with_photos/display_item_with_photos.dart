@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:save/model/database.dart';
 import 'package:save/view/screens/make_edit.dart';
 import 'package:save/view/widgets/components/show_alert_dialog.dart';
-import 'item_content/buttom_of_item.dart';
+import 'item_content/bottom_of_item.dart';
 import 'item_content/center_of_item/add_photo.dart';
 import 'item_content/center_of_item/display_photos.dart';
 import 'item_content/head_of_item.dart';
@@ -51,18 +52,18 @@ class DisplayItemWithPhotos extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<MySql>(
       builder: (context, value, child) => Container(
-        padding: const EdgeInsets.all(5),
+        padding: EdgeInsets.all(5.w),
         decoration: BoxDecoration(
           color: Theme.of(context).indicatorColor.withOpacity(.3),
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(20.r),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: EdgeInsets.all(10.0.w),
           child: Column(
             children: [
               fromSearchScreen
-                  ? const SizedBox(
-                      height: 15,
+                  ? SizedBox(
+                      height: 15.h,
                     )
                   : Row(
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -82,7 +83,7 @@ class DisplayItemWithPhotos extends StatelessWidget {
                           },
                           icon: const Icon(Icons.edit),
                           color: Theme.of(context).primaryColor,
-                          iconSize: 30,
+                          iconSize: 30.sp,
                         ),
                         favScreen
                             ? const SizedBox()
@@ -104,15 +105,15 @@ class DisplayItemWithPhotos extends StatelessWidget {
                                 },
                                 icon: const Icon(Icons.delete),
                                 color: Theme.of(context).primaryColor,
-                                iconSize: 30,
+                                iconSize: 30.sp,
                               ),
                       ],
                     ),
               HeadOfItem(
                   labelList: labelList, urls: urlsList, valuesList: valuesList),
-              const SizedBox(height: 15),
+              SizedBox(height: 15.h),
               SizedBox(
-                height: 150,
+                height: 150.h,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
@@ -120,12 +121,12 @@ class DisplayItemWithPhotos extends StatelessWidget {
                         imagesList: imagesList,
                         title: title,
                         categoryName: categoryName),
-                    const SizedBox(width: 10),
+                    SizedBox(width: 10.w),
                     AddPhoto(title: title, categoryName: categoryName),
                   ],
                 ),
               ),
-              const SizedBox(height: 5),
+              SizedBox(height: 5.h),
               BottomOfItem(
                 categoryName: categoryName,
                 labelList: labelList,

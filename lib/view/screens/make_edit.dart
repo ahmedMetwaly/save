@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 
 import '../../model/database.dart';
@@ -19,16 +20,15 @@ class Edit extends StatelessWidget {
   final String? title;
   final String? itemContent;
 
-
   @override
   Widget build(BuildContext context) {
-      GlobalKey<FormState> formKey = GlobalKey<FormState>();
+    GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
-    List<TextEditingController> controllers = List.generate(
-        labelList.length, (index) => TextEditingController());
-        for(int i=0 ;i<controllers.length;i++){
-          controllers[i].text=valueList[i];
-        }
+    List<TextEditingController> controllers =
+        List.generate(labelList.length, (index) => TextEditingController());
+    for (int i = 0; i < controllers.length; i++) {
+      controllers[i].text = valueList[i];
+    }
     makeEdit(BuildContext context) {
       final value = Provider.of<MySql>(context, listen: false);
       List categories = value.data;
@@ -63,7 +63,7 @@ class Edit extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text("Edit item")),
       body: Padding(
-        padding: const EdgeInsets.all(15.0),
+        padding: EdgeInsets.all(15.0.w),
         child: Consumer<MySql>(
           builder: (context, value, child) {
             return Center(
@@ -79,11 +79,14 @@ class Edit extends StatelessWidget {
                         itemCount: labelList.length,
                         separatorBuilder: (context, index) => const Divider(),
                         itemBuilder: (context, index) {
-                         // controllers[index].text = valueList[index];
+                          // controllers[index].text = valueList[index];
 
                           return Row(
                             children: [
-                              Text("${labelList[index].trim()} : ", style: Theme.of(context).textTheme.labelMedium,),
+                              Text(
+                                "${labelList[index].trim()} : ",
+                                style: Theme.of(context).textTheme.labelMedium,
+                              ),
                               Expanded(
                                 child: InputField(
                                     controller: controllers[index],
@@ -98,14 +101,14 @@ class Edit extends StatelessWidget {
                       const Divider(),
                       SizedBox(
                         width: double.infinity,
-                        height: 45,
+                        height: 45.h,
                         child: ElevatedButton(
                             onPressed: () {
                               makeEdit(context);
                             },
-                            child: const Text(
+                            child: Text(
                               "Apply Edit",
-                              style: TextStyle(fontSize: 18),
+                              style: TextStyle(fontSize: 18.sp),
                             )),
                       ),
                     ]),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:save/model/database.dart';
 import 'package:save/view/widgets/home_widgets/social_media/display_platform_item.dart';
@@ -53,7 +54,7 @@ class DisplaySearchResult extends StatelessWidget {
             appBar: AppBar(title: const Text('Search Result')),
             body: SafeArea(
               child: Padding(
-                padding: const EdgeInsets.all(15.0),
+                padding: EdgeInsets.all(15.0.w),
                 child: Center(
                   child: SingleChildScrollView(
                     child: Column(

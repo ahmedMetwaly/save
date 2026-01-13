@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:save/controller/my_provider.dart';
 import 'package:save/model/cash_helper.dart';
@@ -30,7 +31,7 @@ class _AddCategoryState extends State<AddCategory> {
       ),
       body: SafeArea(
           child: Padding(
-        padding: const EdgeInsets.all(15.0),
+        padding: EdgeInsets.all(15.0.w),
         child: Form(
           key: formKey,
           child: SingleChildScrollView(
@@ -38,8 +39,8 @@ class _AddCategoryState extends State<AddCategory> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const SizedBox(
-                  height: 25,
+                SizedBox(
+                  height: 25.h,
                 ),
                 InputField(
                   controller: categoryName,
@@ -47,14 +48,14 @@ class _AddCategoryState extends State<AddCategory> {
                   hint: "ex: Ai tools",
                   withMaxLines: false,
                 ),
-                const SizedBox(
-                  height: 15,
+                SizedBox(
+                  height: 15.h,
                 ),
                 const ContainsImage(),
                 const NumberOfFileds(),
-                const SizedBox(height: 15),
+                SizedBox(height: 15.h),
                 const Fields(),
-                const SizedBox(height: 15),
+                SizedBox(height: 15.h),
                 Consumer<MyProvider>(
                   builder: (ctxE, value, child) {
                     final read = context.read<MySql>();
@@ -88,7 +89,7 @@ class _AddCategoryState extends State<AddCategory> {
                       child: Container(
                           width: double.infinity,
                           alignment: Alignment.center,
-                          padding: const EdgeInsets.all(10),
+                          padding: EdgeInsets.all(10.w),
                           child: Text(
                             "Add Category",
                             style: Theme.of(ctxE).textTheme.bodyMedium,

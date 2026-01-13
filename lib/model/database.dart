@@ -183,8 +183,8 @@ class MySql with ChangeNotifier {
       context: context,
       builder: (context) {
         return ShowAlertDialog(
-          title: "Clear Favourite",
-          content: "Do you want to clear favourites ?",
+          title: "Clear Favorite",
+          content: "Do you want to clear favorite ?",
           onPressedOk: () async {
             await database
                 .rawQuery("DELETE FROM fav")

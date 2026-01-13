@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:save/model/database.dart';
 import 'package:save/view/widgets/components/show_snack_bar.dart';
@@ -14,16 +15,19 @@ class FAB extends StatefulWidget {
 class _FABState extends State<FAB> {
   @override
   Widget build(BuildContext context) {
-    final provider = Provider.of<MyProvider>(context,listen: false);
+    final provider = Provider.of<MyProvider>(context, listen: false);
 
-    final mySql = Provider.of<MySql>(context,listen: false);
+    final mySql = Provider.of<MySql>(context, listen: false);
     return FloatingActionButton.extended(
       label: Row(
         children: [
-          Text(provider.fabTitle),
+          Text(
+            provider.fabTitle,
+            style: TextStyle(fontSize: 14.sp),
+          ),
           Icon(
             provider.fabIcon,
-            size: 30,
+            size: 30.sp,
           ),
         ],
       ),
@@ -34,17 +38,16 @@ class _FABState extends State<FAB> {
               provider.files.isNotEmpty) {
             mySql
                 .updateCategory(
-                  context: context,
+                    context: context,
                     db: mySql.database,
                     content:
                         "${mySql.categoryFields.map((e) => e.toString())}${mySql.fieldsController.map((e) => e.text)},${provider.files}",
                     categoryName: mySql.categoryDetails["categoryName"])
-                .then((value) {                  
-                });
+                .then((value) {});
           } else if (mySql.categoryDetails["withImage"] == "false") {
             mySql
                 .updateCategory(
-                  context: context,
+                    context: context,
                     db: mySql.database,
                     content:
                         "${mySql.categoryFields.map((e) => e.toString().trim())}${mySql.fieldsController.map((e) => e.text.trim())}",

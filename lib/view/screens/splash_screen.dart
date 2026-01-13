@@ -1,5 +1,6 @@
 import "package:animated_splash_screen/animated_splash_screen.dart";
 import "package:flutter/material.dart";
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import "package:provider/provider.dart";
 import "package:save/controller/my_provider.dart";
 import "package:save/model/cash_helper.dart";
@@ -27,8 +28,8 @@ class SplashScreen extends StatelessWidget {
             splash: Center(
               child: Image.asset(
                 "assets/images/saveAppIcon.png",
-                width: 250,
-                height: 250,
+                width: 250.w,
+                height: 250.h,
                 fit: BoxFit.cover,
               ),
             ),

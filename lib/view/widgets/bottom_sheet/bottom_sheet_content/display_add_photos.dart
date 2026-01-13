@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:save/controller/my_provider.dart';
 import '../../components/gallary_view.dart';
@@ -12,7 +13,7 @@ class DisplayAddPhotos extends StatelessWidget {
   Widget build(BuildContext context) {
     // final watch = context.watch<MyProvider>();
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15.0),
+      padding: EdgeInsets.symmetric(horizontal: 15.0.w),
       child: Consumer<MyProvider>(
         builder: (context, value, child) => SingleChildScrollView(
           child: Column(
@@ -47,11 +48,11 @@ class DisplayAddPhotos extends StatelessWidget {
                               style: Theme.of(context).textTheme.labelMedium,
                             ),
                           ),
-                          const SizedBox(
-                            width: 15,
+                          SizedBox(
+                            width: 15.w,
                           ),
                           InkWell(
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(10.r),
                             onTap: () {
                               Navigator.push(
                                 context,
@@ -68,41 +69,41 @@ class DisplayAddPhotos extends StatelessWidget {
                               );
                             },
                             child: ClipRRect(
-                              borderRadius: BorderRadius.circular(10),
+                              borderRadius: BorderRadius.circular(10.r),
                               child: Image.file(
                                 value.files[index]!,
                                 fit: BoxFit.cover,
-                                width: 50,
-                                height: 50,
+                                width: 50.w,
+                                height: 50.h,
                               ),
                             ),
                           ),
-                          const SizedBox(
-                            width: 15,
+                          SizedBox(
+                            width: 15.w,
                           ),
                           IconButton(
                             onPressed: () => value.removeImage(index),
                             icon: Icon(
                               Icons.disabled_by_default_rounded,
                               color: Theme.of(context).indicatorColor,
-                              size: 30,
+                              size: 30.sp,
                             ),
                           )
                         ]);
                   },
-                  separatorBuilder: (context, index) => const SizedBox(
-                        height: 10,
+                  separatorBuilder: (context, index) => SizedBox(
+                        height: 10.h,
                       ),
                   itemCount: value.files.length),
-              const SizedBox(
-                height: 15,
+              SizedBox(
+                height: 15.h,
               ),
               ElevatedButton(
                 onPressed: () => value.selectImages(),
                 child: Container(
                     width: double.infinity,
                     alignment: Alignment.center,
-                    padding: const EdgeInsets.all(10),
+                    padding: EdgeInsets.all(10.w),
                     child: Text(
                       "Select Images",
                       style: Theme.of(context).textTheme.bodyMedium,

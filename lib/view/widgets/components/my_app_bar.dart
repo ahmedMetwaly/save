@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:save/view/screens/home.dart';
 import '../../screens/search.dart';
 
@@ -6,11 +7,11 @@ AppBar myAppBar(BuildContext context) {
   return AppBar(
     title: InkWell(
       onTap: () => Navigator.of(context).pushNamed(SearchScreen.routeName),
-      borderRadius: BorderRadius.circular(20),
+      borderRadius: BorderRadius.circular(20.r),
       child: Container(
-        padding: const EdgeInsets.only(left: 15, top: 5, bottom: 5, right: 15),
+        padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 5.h),
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(20.r),
             border: Border.all(
               color: Theme.of(context).indicatorColor,
             )),
@@ -19,10 +20,10 @@ AppBar myAppBar(BuildContext context) {
           Text("Search",
               style: TextStyle(
                   color: Theme.of(context).primaryColor.withOpacity(.5),
-                  fontSize: 18)),
+                  fontSize: 18.sp)),
           Icon(
             Icons.search,
-            size: 28,
+            size: 28.sp,
             color: Theme.of(context).primaryColor.withOpacity(.5),
           ),
         ]),
@@ -30,8 +31,9 @@ AppBar myAppBar(BuildContext context) {
     ),
     leading: Builder(
       builder: (context) => IconButton(
-        icon:const Icon(
+        icon: Icon(
           Icons.menu_rounded,
+          size: 24.sp,
         ),
         onPressed: () => Scaffold.of(context).openDrawer(),
       ),
@@ -39,18 +41,22 @@ AppBar myAppBar(BuildContext context) {
     actions: [
       Builder(
         builder: (context) => IconButton(
-          icon: const Icon(
+          icon: Icon(
             Icons.home_rounded,
+            size: 24.sp,
           ),
           onPressed: () =>
               Navigator.of(context).popAndPushNamed(Home.routeName),
         ),
       ),
-      const SizedBox(width: 5,),
+      SizedBox(
+        width: 5.w,
+      ),
     ],
     backgroundColor: Theme.of(context).canvasColor,
     iconTheme: IconThemeData(
       color: Theme.of(context).primaryColor,
+      size: 24.sp,
     ),
   );
 }

@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';
 import 'package:flutter_svg/svg.dart';
@@ -88,8 +89,8 @@ class _GallaryViewState extends State<GallaryView> {
                 itemCount: widget.galleryItems.length,
                 loadingBuilder: (context, event) => Center(
                   child: SizedBox(
-                    width: 20.0,
-                    height: 20.0,
+                    width: 20.0.w,
+                    height: 20.0.h,
                     child: CircularProgressIndicator(
                       value: event == null
                           ? 0
@@ -104,12 +105,12 @@ class _GallaryViewState extends State<GallaryView> {
                 scrollDirection: Axis.horizontal,
               ),
               Container(
-                padding: const EdgeInsets.all(20.0),
+                padding: EdgeInsets.all(20.0.w),
                 child: Text(
                   "Image ${currentIndex + 1}",
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: Colors.white,
-                    fontSize: 17.0,
+                    fontSize: 17.0.sp,
                     decoration: null,
                   ),
                 ),
@@ -118,7 +119,7 @@ class _GallaryViewState extends State<GallaryView> {
                   ? const SizedBox()
                   : Consumer<MySql>(
                       builder: (context, value, child) => Positioned(
-                        top: 15,
+                        top: 15.h,
                         child: IconButton(
                             onPressed: () {
                               //print("delete $currentIndex");
@@ -162,10 +163,10 @@ class _GallaryViewState extends State<GallaryView> {
                                         },
                                       ));
                             },
-                            icon: const Icon(
+                            icon: Icon(
                               Icons.delete_rounded,
                               color: Colors.white,
-                              size: 30,
+                              size: 30.sp,
                             )),
                       ),
                     )
@@ -181,14 +182,14 @@ class _GallaryViewState extends State<GallaryView> {
     return item.contains(".svg")
         ? PhotoViewGalleryPageOptions.customChild(
             child: SizedBox(
-              width: 300,
-              height: 300,
+              width: 300.w,
+              height: 300.h,
               child: SvgPicture.asset(
                 item,
-                height: 200.0,
+                height: 200.0.h,
               ),
             ),
-            childSize: const Size(300, 300),
+            childSize: Size(300.w, 300.h),
             initialScale: PhotoViewComputedScale.contained,
             minScale: PhotoViewComputedScale.contained * (0.5 + index / 10),
             maxScale: PhotoViewComputedScale.covered * 4.1,

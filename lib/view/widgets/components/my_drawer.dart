@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:provider/provider.dart";
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import "package:save/model/cash_helper.dart";
 import "package:save/view/screens/add_category.dart";
 import "package:save/view/screens/fav.dart";
@@ -17,18 +18,18 @@ class MyDrawer extends StatelessWidget {
             children: [
               Container(
                 color: Theme.of(context).indicatorColor,
-                height: 180,
+                height: 180.h,
                 width: double.maxFinite,
-                margin: const EdgeInsetsDirectional.only(bottom: 20),
-                padding: const EdgeInsets.all(20),
+                margin: EdgeInsetsDirectional.only(bottom: 20.h),
+                padding: EdgeInsets.all(20.w),
                 alignment: Alignment.center,
                 child: Image.asset(
                   "assets/images/saveAppIcon.png",
                   fit: BoxFit.cover,
                 ),
               ),
-              const SizedBox(
-                height: 30,
+              SizedBox(
+                height: 30.h,
               ),
               SwitchListTile(
                 title: Row(
@@ -36,14 +37,16 @@ class MyDrawer extends StatelessWidget {
                     Icon(
                       Icons.brightness_6_sharp,
                       color: Theme.of(context).indicatorColor,
-                      size: 30,
+                      size: 30.sp,
                     ),
-                    const SizedBox(
-                      width: 25,
+                    SizedBox(
+                      width: 25.w,
                     ),
                     Text(
                       "Theme",
-                      style: Theme.of(context).textTheme.bodyLarge,
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                            fontSize: 16.sp,
+                          ),
                     ),
                   ],
                 ),
@@ -53,8 +56,8 @@ class MyDrawer extends StatelessWidget {
                   value.loadPref();
                 },
               ),
-              const SizedBox(
-                height: 20,
+              SizedBox(
+                height: 20.h,
               ),
               ListTile(
                 onTap: () =>
@@ -62,39 +65,43 @@ class MyDrawer extends StatelessWidget {
                 leading: Icon(
                   Icons.note_add_rounded,
                   color: Theme.of(context).indicatorColor,
-                  size: 30,
+                  size: 30.sp,
                 ),
-                title: const Text(
+                title: Text(
                   "Add Category",
+                  style: TextStyle(fontSize: 16.sp),
                 ),
               ),
-              const SizedBox(
-                height: 20,
+              SizedBox(
+                height: 20.h,
               ),
               ListTile(
                 onTap: () =>
                     Navigator.of(context).pushNamed(FavScreen.routeName),
-                leading: const Icon(
+                leading: Icon(
                   Icons.favorite,
                   color: Colors.red,
-                  size: 30,
+                  size: 30.sp,
                 ),
-                title: const Text(
+                title: Text(
                   "Favourite",
+                  style: TextStyle(fontSize: 16.sp),
                 ),
               ),
-              const SizedBox(
-                height: 20,
+              SizedBox(
+                height: 20.h,
               ),
               ListTile(
                 onTap: () => Navigator.of(context)
                     .pushNamed(DisplaySocialMedia.routeName),
-                leading: const CircleAvatar(
-                  backgroundImage: AssetImage("assets/images/plateforms.png"),
-                  radius: 18,
+                leading: CircleAvatar(
+                  backgroundImage:
+                      const AssetImage("assets/images/plateforms.png"),
+                  radius: 18.r,
                 ),
-                title: const Text(
+                title: Text(
                   "Social Media Data",
+                  style: TextStyle(fontSize: 16.sp),
                 ),
               ),
             ],

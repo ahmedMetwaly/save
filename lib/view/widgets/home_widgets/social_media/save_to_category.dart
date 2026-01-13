@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:save/view/screens/home.dart';
 
@@ -24,12 +25,12 @@ class SaveToCategory extends StatelessWidget {
         (context) => Container(
           padding:
               const EdgeInsets.only(top: 20.0, left: 10, right: 10, bottom: 10),
-          height: MediaQuery.of(context).size.height * 0.4,
+          height: 0.4.sh,
           decoration: BoxDecoration(
             color: Theme.of(context).indicatorColor.withOpacity(0.3),
-            borderRadius: const BorderRadius.only(
-              topLeft: Radius.circular(45),
-              topRight: Radius.circular(45),
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(45.r),
+              topRight: Radius.circular(45.r),
             ),
           ),
           child: Form(
@@ -43,16 +44,16 @@ class SaveToCategory extends StatelessWidget {
                       label: "Category name",
                       hint: "ex: technology",
                       withMaxLines: false),
-                  const SizedBox(
-                    height: 20,
+                  SizedBox(
+                    height: 20.h,
                   ),
                   InputField(
                       controller: titleController,
                       label: "Title",
                       hint: "ex: labtobs",
                       withMaxLines: false),
-                  const SizedBox(
-                    height: 20,
+                  SizedBox(
+                    height: 20.h,
                   ),
                   Consumer<MySql>(
                     builder: (context, value, child) => ElevatedButton(

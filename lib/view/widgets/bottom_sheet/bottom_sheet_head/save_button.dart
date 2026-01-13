@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SaveButton extends StatelessWidget {
   const SaveButton({super.key});
@@ -10,15 +11,15 @@ class SaveButton extends StatelessWidget {
         Navigator.of(context).pop();
       },
       child: Container(
-        width: 60,
-        height: 60,
+        width: 60.w,
+        height: 60.h,
         decoration: BoxDecoration(
           color: Theme.of(context).primaryColor,
-          borderRadius: BorderRadius.circular(50),
+          borderRadius: BorderRadius.circular(50.r),
         ),
         child: Icon(
           Icons.save_as_rounded,
-          size: 40,
+          size: 40.sp,
           color: Theme.of(context).indicatorColor,
         ),
       ),

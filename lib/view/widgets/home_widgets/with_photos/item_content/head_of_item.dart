@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:save/view/widgets/components/link_preview.dart';
-
 
 class HeadOfItem extends StatelessWidget {
   const HeadOfItem({
@@ -23,7 +23,7 @@ class HeadOfItem extends StatelessWidget {
         // print("contentSendedToAddPhoto : ${content[index].substring(
         //         0, content[index].lastIndexOf(")") + 1)}");
         return DefaultTextStyle(
-          style: Theme.of(context).textTheme.labelMedium??const TextStyle(),
+          style: Theme.of(context).textTheme.labelMedium ?? const TextStyle(),
           child: Row(
             children: [
               Text("${labelList[index].trim().toUpperCase()} : "),
@@ -39,8 +39,8 @@ class HeadOfItem extends StatelessWidget {
         );
       },
       itemCount: labelList.length,
-      separatorBuilder: (context, index) => const SizedBox(
-        height: 5,
+      separatorBuilder: (context, index) => SizedBox(
+        height: 5.h,
       ),
     );
   }

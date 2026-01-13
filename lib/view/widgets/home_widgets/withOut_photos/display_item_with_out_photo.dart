@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:save/controller/my_provider.dart';
 import 'package:save/model/database.dart';
@@ -38,7 +39,7 @@ class DisplayItemWithOutPhoto extends StatelessWidget {
       builder: (context, mySQL, child) {
         return Container(
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
+            borderRadius: BorderRadius.circular(15.r),
             color: Theme.of(context).indicatorColor.withOpacity(0.3),
           ),
           child: Column(
@@ -63,7 +64,7 @@ class DisplayItemWithOutPhoto extends StatelessWidget {
                           },
                           icon: const Icon(Icons.edit),
                           color: Theme.of(context).primaryColor,
-                          iconSize: 30,
+                          iconSize: 30.sp,
                         ),
                         onFavScreen
                             ? const SizedBox()
@@ -84,13 +85,17 @@ class DisplayItemWithOutPhoto extends StatelessWidget {
                                                       valueList: valueList,
                                                       labelList: labelList)
                                                   .then((value) {
-                                                   List favContent= mySQL.favList.map((fav) => fav["content"]).toList(); 
-                                                    if(favContent.contains(itemContent)){
-                                                      mySQL.deleteFromFav(content: itemContent);
-                                                    }
-                                                    Navigator.of(context)
-                                                          .pop();
-                                                  });
+                                                List favContent = mySQL.favList
+                                                    .map(
+                                                        (fav) => fav["content"])
+                                                    .toList();
+                                                if (favContent
+                                                    .contains(itemContent)) {
+                                                  mySQL.deleteFromFav(
+                                                      content: itemContent);
+                                                }
+                                                Navigator.of(context).pop();
+                                              });
                                             },
                                           ));
 
@@ -98,12 +103,12 @@ class DisplayItemWithOutPhoto extends StatelessWidget {
                                 },
                                 icon: const Icon(Icons.delete),
                                 color: Theme.of(context).primaryColor,
-                                iconSize: 30,
+                                iconSize: 30.sp,
                               ),
                       ],
                     ),
               ListView.builder(
-                padding: const EdgeInsets.all(15),
+                padding: EdgeInsets.all(15.w),
                 itemCount: data.length,
                 physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
@@ -111,13 +116,14 @@ class DisplayItemWithOutPhoto extends StatelessWidget {
                   for (int i = 0; i < urls.length; i++) {
                     if (urls.isNotEmpty && data[indx].contains(urls[i])) {
                       return Padding(
-                        padding: const EdgeInsets.only(top: 15),
+                        padding: EdgeInsets.only(top: 15.h),
                         child: Row(
                           children: [
                             Text(
                                 "${data[indx].replaceAll(urls[i], "").trim()} ",
                                 style: Theme.of(context).textTheme.labelMedium),
-                            Expanded(child: LinkPreviewWidget(urlLink: urls[i])),
+                            Expanded(
+                                child: LinkPreviewWidget(urlLink: urls[i])),
                           ],
                         ),
                       );
@@ -133,12 +139,12 @@ class DisplayItemWithOutPhoto extends StatelessWidget {
                   );
                 },
               ),
-              ButtomOfWithOutPhotosItem(
+              BottomOfWithOutPhotosItem(
                 data: data,
                 categoryName: categoryName,
               ),
-              const SizedBox(
-                height: 10,
+              SizedBox(
+                height: 10.h,
               ),
             ],
           ),

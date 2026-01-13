@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../model/database.dart';
@@ -22,12 +23,12 @@ class EditPlatformItem extends StatelessWidget {
             Scaffold.of(context).showBottomSheet((context) => Container(
                   padding: const EdgeInsets.only(
                       top: 20.0, left: 10, right: 10, bottom: 10),
-                  height: MediaQuery.of(context).size.height * 0.4,
+                  height: 0.4.sh,
                   decoration: BoxDecoration(
                     color: Theme.of(context).indicatorColor.withOpacity(0.3),
-                    borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(45),
-                      topRight: Radius.circular(45),
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(45.r),
+                      topRight: Radius.circular(45.r),
                     ),
                   ),
                   child: Form(
@@ -41,12 +42,11 @@ class EditPlatformItem extends StatelessWidget {
                               label: "New value",
                               hint: "ex: Ai tool",
                               withMaxLines: false),
-                          const SizedBox(
-                            height: 20,
+                          SizedBox(
+                            height: 20.h,
                           ),
                           ElevatedButton(
                             onPressed: () async {
-                              
                               if (formKey.currentState!.validate()) {
                                 value
                                     .updateSocialMediaItem(
@@ -95,7 +95,7 @@ class EditPlatformItem extends StatelessWidget {
             Icons.edit,
             color: Theme.of(context).primaryColor,
           ),
-          splashRadius: 20),
+          splashRadius: 20.r),
     );
   }
 }

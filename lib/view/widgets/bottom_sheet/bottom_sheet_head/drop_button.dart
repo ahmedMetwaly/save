@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:save/model/database.dart';
 import '../../../../controller/my_provider.dart';
@@ -14,13 +15,15 @@ class DropButton extends StatelessWidget {
     final makeSql = context.watch<MySql>();
     return Expanded(
       child: DropdownButton(
-        padding: const EdgeInsets.symmetric(vertical: 15),
+        padding: EdgeInsets.symmetric(vertical: 15.h),
         dropdownColor: Theme.of(context).indicatorColor,
-        borderRadius: const BorderRadius.vertical(bottom: Radius.circular(10)),
-        hint: const Text(
+        borderRadius: BorderRadius.vertical(bottom: Radius.circular(10.r)),
+        hint: Text(
           "Select",
-          style: TextStyle(fontSize: 20,                overflow: TextOverflow.ellipsis,
-),
+          style: TextStyle(
+            fontSize: 20.sp,
+            overflow: TextOverflow.ellipsis,
+          ),
         ),
         value: read.dropDownButtonItem,
         isExpanded: true,
@@ -28,7 +31,7 @@ class DropButton extends StatelessWidget {
           return DropdownMenuItem(
             value: category["categoryName"],
             child: Padding(
-              padding: const EdgeInsets.only(bottom: 10.0),
+              padding: EdgeInsets.only(bottom: 10.0.h),
               child: Text(
                 category["categoryName"],
                 style: Theme.of(context).textTheme.bodyMedium,
