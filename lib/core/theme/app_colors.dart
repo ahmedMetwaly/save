@@ -68,6 +68,6 @@ class AppColors {
   static const Color youtube = Color(0xFFFF0000);
   static const Color linkedin = Color(0xFF0A66C2);
   static const Color tiktok = Color(0xFF000000);
-  static const Color snapchat = Color(0xFFFFFC00);
+  static const Color snapchat = Color.fromARGB(255, 231, 228, 27);
   static const Color chrome = Color(0xFF4285F4);
 }
