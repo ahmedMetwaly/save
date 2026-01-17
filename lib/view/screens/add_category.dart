@@ -7,6 +7,7 @@ import 'package:save/model/cash_helper.dart';
 import 'package:save/model/database.dart';
 import '../widgets/add_category_widgtes/contains_image.dart';
 import '../widgets/add_category_widgtes/fields.dart';
+import '../widgets/components/gradient_sliver_app_bar.dart';
 import '../widgets/components/input_field.dart';
 import 'home.dart';
 
@@ -62,72 +63,9 @@ class _AddCategoryState extends State<AddCategory>
       body: CustomScrollView(
         slivers: [
           // Modern Gradient App Bar
-          SliverAppBar(
-            expandedHeight: 140.h,
-            floating: false,
-            pinned: true,
-            elevation: 0,
-            backgroundColor: Colors.transparent,
-            flexibleSpace: Container(
-              decoration: const BoxDecoration(
-                gradient: AppColors.primaryGradient,
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(30),
-                  bottomRight: Radius.circular(30),
-                ),
-              ),
-              child: FlexibleSpaceBar(
-                centerTitle: true,
-                title: Text(
-                  "Create Category",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20.sp,
-                  ),
-                ),
-                background: Stack(
-                  children: [
-                    Positioned(
-                      right: -30.w,
-                      top: -30.h,
-                      child: Container(
-                        width: 150.w,
-                        height: 150.h,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.white.withValues(alpha: 0.1),
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      left: -20.w,
-                      bottom: 20.h,
-                      child: Container(
-                        width: 80.w,
-                        height: 80.h,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.white.withValues(alpha: 0.08),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            leading: IconButton(
-              icon: Container(
-                padding: EdgeInsets.all(8.w),
-                decoration: BoxDecoration(
-                  color: Colors.white.withValues(alpha: 0.2),
-                  borderRadius: BorderRadius.circular(12.r),
-                ),
-                child: const Icon(Icons.arrow_back_ios_new,
-                    color: Colors.white, size: 18),
-              ),
-              onPressed: () => Navigator.pop(context),
-            ),
+          const GradientSliverAppBar(
+            title: "Create Category",
+            showBackButton: true,
           ),
 
           // Content
