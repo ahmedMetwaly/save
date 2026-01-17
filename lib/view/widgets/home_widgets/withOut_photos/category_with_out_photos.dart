@@ -55,11 +55,10 @@ class CategoryWithOutPhotos extends StatelessWidget {
         );
       }
     }
-    return Center(
-      child: Text(
-        "Empty",
-        style: Theme.of(context).textTheme.labelMedium,
-      ),
+    return EmptyStateWidget(
+      icon: Icons.inbox_rounded,
+      title: 'No Items Yet',
+      subtitle: 'Tap the + button to add your first item',
     );
   }
 }

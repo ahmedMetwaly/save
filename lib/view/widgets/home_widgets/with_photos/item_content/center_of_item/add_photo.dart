@@ -68,7 +68,7 @@ class AddPhoto extends StatelessWidget {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10.r),
               border: Border.all(
-                color: Theme.of(context).indicatorColor,
+                color: Theme.of(context).primaryColor.withValues(alpha: 0.5),
               )),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
