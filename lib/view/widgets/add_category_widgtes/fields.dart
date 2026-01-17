@@ -22,6 +22,7 @@ class Fields extends StatelessWidget {
           ListView.separated(
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
+            padding: EdgeInsets.zero,
             separatorBuilder: (ctxL, index) => SizedBox(height: 12.h),
             itemCount: value.controllerNumbers,
             itemBuilder: ((ctxL, index) => Container(
@@ -98,7 +99,7 @@ class Fields extends StatelessWidget {
                   ),
                 )),
           ),
-          SizedBox(height: 16.h),
+          if (value.controllerNumbers > 0) SizedBox(height: 16.h),
           // Add Field Button
           Material(
             color: Colors.transparent,

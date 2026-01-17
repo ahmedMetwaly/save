@@ -176,27 +176,27 @@ class _AddCategoryState extends State<AddCategory>
                           isDark: isDark,
                           title: "Category Details",
                           icon: Icons.edit_rounded,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Category Name",
-                                style: TextStyle(
-                                  fontSize: 14.sp,
-                                  fontWeight: FontWeight.w600,
-                                  color: isDark
-                                      ? AppColors.textSecondaryDark
-                                      : AppColors.textSecondaryLight,
-                                ),
+                          child: Container(
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 16.w, vertical: 8.h),
+                            decoration: BoxDecoration(
+                              color: isDark
+                                  ? AppColors.surfaceDark
+                                  : AppColors.backgroundLight,
+                              borderRadius: BorderRadius.circular(16.r),
+                              border: Border.all(
+                                color: isDark
+                                    ? AppColors.borderDark
+                                    : AppColors.borderLight,
+                                width: 1,
                               ),
-                              SizedBox(height: 10.h),
-                              InputField(
-                                controller: categoryName,
-                                label: "Category Name",
-                                hint: "ex: AI Tools, Recipes, Notes...",
-                                withMaxLines: false,
-                              ),
-                            ],
+                            ),
+                            child: InputField(
+                              controller: categoryName,
+                              label: "Category Name",
+                              hint: "ex: AI Tools, Recipes, Notes...",
+                              withMaxLines: false,
+                            ),
                           ),
                         ),
                         SizedBox(height: 20.h),
