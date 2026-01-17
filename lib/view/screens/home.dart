@@ -43,7 +43,7 @@ class Home extends StatelessWidget {
                   body: SafeArea(
                     child: Column(children: [
                       Categories(categoryNames: categoryNames),
-                      Padding(
+                      /*       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 16.w),
                         child: GestureDetector(
                           onTap: () => Navigator.of(context)
@@ -69,6 +69,7 @@ class Home extends StatelessWidget {
                           ),
                         ),
                       ),
+                  */
                       value.data.isNotEmpty
                           ? Expanded(
                               child: Padding(

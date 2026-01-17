@@ -99,18 +99,14 @@ class Edit extends StatelessWidget {
                         },
                       ),
                       const Divider(),
-                      SizedBox(
-                        width: double.infinity,
-                        height: 45.h,
-                        child: ElevatedButton(
-                            onPressed: () {
-                              makeEdit(context);
-                            },
-                            child: Text(
-                              "Apply Edit",
-                              style: TextStyle(fontSize: 18.sp),
-                            )),
-                      ),
+                      ElevatedButton(
+                          onPressed: () {
+                            makeEdit(context);
+                          },
+                          child: Text(
+                            "Save",
+                            // style: TextStyle(fontSize: 18.sp),
+                          )),
                     ]),
               ),
             );

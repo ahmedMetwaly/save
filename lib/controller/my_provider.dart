@@ -22,7 +22,7 @@ class MyProvider with ChangeNotifier {
 
   bool isConnected = false;
 
- /*  bool _getUrlValid(String url) {
+  /*  bool _getUrlValid(String url) {
     bool isUrlValid = AnyLinkPreview.isValidLink(
       url,
       protocols: ['http', 'https'],
@@ -61,10 +61,9 @@ class MyProvider with ChangeNotifier {
     notifyListeners();
   }
 
-
   Future<void> execute() async {
-     isConnected = await InternetConnectionChecker.instance.hasConnection;
-   
+    isConnected = await InternetConnectionChecker.instance.hasConnection;
+
     // actively listen for status updates
     final StreamSubscription<InternetConnectionStatus> listener =
         InternetConnectionChecker.instance.onStatusChange.listen(
@@ -155,6 +154,23 @@ class MyProvider with ChangeNotifier {
     } else if (operation == "minus" && controllerNumbers > 1) {
       controllerNumbers--;
       controllers.removeLast();
+      notifyListeners();
+    }
+  }
+
+  void addField() {
+    if (controllerNumbers < 10) {
+      controllerNumbers++;
+      controllers.add(TextEditingController());
+      notifyListeners();
+    }
+  }
+
+  void removeFieldAt(int index) {
+    if (controllerNumbers > 0 && index < controllers.length) {
+      controllers[index].dispose();
+      controllers.removeAt(index);
+      controllerNumbers--;
       notifyListeners();
     }
   }

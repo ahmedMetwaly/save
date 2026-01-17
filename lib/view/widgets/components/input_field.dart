@@ -26,7 +26,7 @@ class InputField extends StatelessWidget {
     return TextFormField(
       controller: controller,
       keyboardType: TextInputType.multiline,
-      style: Theme.of(context).textTheme.labelMedium!.copyWith(fontSize: 20.sp),
+      style: Theme.of(context).textTheme.labelMedium,
       minLines: 1,
       maxLines: withMaxLines ? 25 : 1,
       validator: (value) {
@@ -47,12 +47,8 @@ class InputField extends StatelessWidget {
         hintText: hint,
         hintStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
               color: Theme.of(context).primaryColor.withOpacity(0.5),
-              fontSize: 18.sp,
             ),
-        labelStyle:
-            Theme.of(context).textTheme.bodyLarge?.copyWith(fontSize: 20.sp),
-        errorStyle:
-            TextStyle(color: Theme.of(context).primaryColor, fontSize: 12.sp),
+        errorStyle: TextStyle(color: Colors.red),
         contentPadding: EdgeInsets.all(10.w),
         errorBorder: outLineInputBorderStyle,
         focusedErrorBorder: outLineInputBorderStyle,
